@@ -7,7 +7,7 @@
 <title>Olavi Beauty | B2B Beauty Products Supplier</title>
 <style>
 :root{--ink:#252321;--muted:#716b65;--cream:#faf7f2;--pink:#ead7d0;--accent:#9a6356;--line:#e8e0d9}
-*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.6}a{color:inherit;text-decoration:none}.top{background:#292522;color:#fff;text-align:center;padding:9px;font-size:12px;letter-spacing:1px}.nav{height:76px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:20px}..logo{
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.6}a{color:inherit;text-decoration:none}.top{background:#292522;color:#fff;text-align:center;padding:9px;font-size:12px;letter-spacing:1px}.nav{height:76px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:20px}.logo{
   display:flex;
   align-items:center;
   flex-shrink:0;
@@ -18,7 +18,58 @@
   width:auto;
   max-width:180px;
   object-fit:contain;
-}.links{display:flex;gap:25px;font-size:13px}.btn{display:inline-block;background:var(--ink);color:white;padding:13px 21px;font-size:12px;letter-spacing:1px;border:1px solid var(--ink)}.hero{background:var(--cream);padding:78px 8%;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:45px}.eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--accent)}h1{font-family:Georgia,serif;font-size:clamp(38px,5vw,65px);line-height:1.1;font-weight:normal;margin:20px 0}.hero p,.intro p{color:var(--muted);max-width:490px}.heroimg{width:100%;height:390px;object-fit:contain;background:#eee1d9}.section{padding:76px 8%}.center{text-align:center}.section h2{font-family:Georgia,serif;font-size:37px;font-weight:normal;margin:10px 0 18px}.intro{max-width:680px;margin:0 auto 38px}.products{display:grid;grid-template-columns:repeat(3,1fr);gap:23px;margin-top:35px}.product img{
+}.links{display:flex;gap:25px;font-size:13px}
+/* Navigation dropdown menus */
+.links {
+  align-items: center;
+}
+
+.links > a,
+.dropdown-toggle {
+  display: inline-block;
+  padding: 12px 0;
+  white-space: nowrap;
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  content: " ▾";
+  font-size: 10px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -12px;
+  min-width: 210px;
+  padding: 8px 0;
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 14px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+  background: var(--cream);
+  color: var(--accent);
+}
+
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+.btn{display:inline-block;background:var(--ink);color:white;padding:13px 21px;font-size:12px;letter-spacing:1px;border:1px solid var(--ink)}.hero{background:var(--cream);padding:78px 8%;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:45px}.eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--accent)}h1{font-family:Georgia,serif;font-size:clamp(38px,5vw,65px);line-height:1.1;font-weight:normal;margin:20px 0}.hero p,.intro p{color:var(--muted);max-width:490px}.heroimg{width:100%;height:390px;object-fit:contain;background:#eee1d9}.section{padding:76px 8%}.center{text-align:center}.section h2{font-family:Georgia,serif;font-size:37px;font-weight:normal;margin:10px 0 18px}.intro{max-width:680px;margin:0 auto 38px}.products{display:grid;grid-template-columns:repeat(3,1fr);gap:23px;margin-top:35px}.product img{
   display:block;
   width:100%;
   aspect-ratio:1 / 1;
@@ -87,12 +138,27 @@
     min-height:70px;
     flex-wrap:wrap;
   }
-  .links{
-    width:100%;
-    gap:15px;
-    flex-wrap:wrap;
-    font-size:12px;
-  }
+  
+.links {
+  width: 100%;
+  gap: 15px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  align-items: center;
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  left: 0;
+  min-width: 190px;
+}
+
+.dropdown-menu a {
+  padding: 12px 14px;
+}
   .nav .btn{
     padding:9px 12px;
   }
@@ -137,7 +203,31 @@
     alt="Olavi Beauty"
   >
 </a>
-<nav class="links"><a href="#products">Products</a><a href="#about">About Us</a><a href="#services">OEM / ODM</a></nav>
+
+<nav class="links">
+  <a href="index.html">Home</a>
+
+  <div class="nav-dropdown">
+    <a href="#products" class="dropdown-toggle">Products</a>
+    <div class="dropdown-menu">
+      <a href="cotton-swabs.html">Wooden Cotton Swabs</a>
+      <a href="lip-gloss.html">Lipstick &amp; Lip Gloss</a>
+      <a href="makeup-mirror.html">Makeup Mirrors</a>
+    </div>
+  </div>
+
+  <a href="about-us.html">About Us</a>
+
+  <div class="nav-dropdown">
+    <a href="#certificate" class="dropdown-toggle">Certificates</a>
+    <div class="dropdown-menu">
+      <a href="#certificate">Our Certificate</a>
+    </div>
+  </div>
+
+  <a href="#contact">Contact Us</a>
+</nav>
+
 <a class="btn" href="#contact">CONTACT US</a>
 </header>
 <main>
