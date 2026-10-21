@@ -129,6 +129,52 @@
 }
 
 @media (max-width: 700px) {
+  .product-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  /* 手机端：主图显示在上方 */
+  .main-image-wrap {
+    order: -1;
+    min-width: 0;
+  }
+
+  /* 手机端：缩略图横向排列 */
+  .thumbnail-gallery {
+    order: 0;
+    display: block;
+    width: 100%;
+  }
+
+  .thumbnail-list {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    width: 100%;
+    height: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 6px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .thumbnail {
+    flex: 0 0 62px;
+    width: 62px;
+    height: 62px;
+  }
+
+  /* 手机端隐藏上下箭头，直接左右滑动图片 */
+  .thumb-arrow {
+    display: none;
+  }
+}
   .gallery {
     grid-template-columns: 1fr;
     gap: 12px;
