@@ -235,45 +235,89 @@
     }
 
     @media (max-width: 700px) {
-      .container {
-        width: calc(100% - 32px);
-      }
+  .container {
+    width: calc(100% - 32px);
+  }
 
-      .header-inner {
-        gap: 12px;
-      }
+  .header-inner {
+    gap: 12px;
+  }
 
-      .logo {
-        width: 145px;
-      }
+  .logo {
+    width: 145px;
+  }
 
-      .contact-link {
-        padding: 9px 12px;
-        font-size: 11px;
-      }
+  .contact-link {
+    padding: 9px 12px;
+    font-size: 11px;
+  }
 
-      .product-layout {
-        grid-template-columns: 1fr;
-        gap: 24px;
-        padding-bottom: 40px;
-      }
+  .product-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    padding-bottom: 40px;
+  }
 
-      .product-info {
-        padding-top: 0;
-      }
+  /* 手机端：主图在上，缩略图在下 */
+  .gallery {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px;
+    width: 100%;
+    min-width: 0;
+  }
 
-      h1 {
-        font-size: 30px;
-      }
+  .main-image-wrap {
+    order: 0 !important;
+    width: 100%;
+    min-width: 0;
+  }
 
-      .specifications th {
-        width: 40%;
-      }
+  .thumbnail-gallery {
+    order: 1 !important;
+    display: block !important;
+    width: 100%;
+    height: auto;
+  }
 
-      .details-section {
-        padding: 32px 0 40px;
-      }
-    }
+  .thumbnail-list {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    width: 100%;
+    height: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 6px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .thumbnail {
+    flex: 0 0 62px;
+    width: 62px;
+    height: 62px;
+  }
+
+  .thumb-arrow {
+    display: none;
+  }
+
+  .product-info {
+    padding-top: 0;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .specifications th {
+    width: 40%;
+  }
+
+  .details-section {
+    padding: 32px 0 40px;
+  }
+}
   </style>
 </head>
 <body>
