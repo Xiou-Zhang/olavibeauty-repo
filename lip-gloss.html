@@ -80,7 +80,69 @@
       background: #f8f4f0;
       border-radius: 8px;
     }
+    .gallery {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+  width: 100%;
+  min-width: 0;
+}
 
+.thumbnail-gallery {
+  display: grid;
+  grid-template-rows: 24px 352px 24px;
+  gap: 8px;
+  width: 76px;
+}
+
+.thumbnail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 352px;
+  overflow: hidden;
+}
+
+.thumbnail {
+  display: block;
+  flex: 0 0 82px;
+  width: 76px;
+  height: 82px;
+  padding: 3px;
+  border: 1px solid #e5ddd7;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.thumbnail img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+  border: 2px solid #9a6356;
+  padding: 2px;
+}
+
+.thumb-arrow {
+  width: 76px;
+  height: 24px;
+  border: none;
+  border-radius: 4px;
+  background: #f8f4f0;
+  color: #8f5e51;
+  cursor: pointer;
+}
+
+.thumb-arrow:hover {
+  background: #eee2da;
+}
     .product-info {
       padding: 8px 0;
     }
@@ -235,15 +297,45 @@
     </div>
 
     <section class="product-layout">
-      <div class="gallery">
-        <div class="main-image-wrap">
-          <img
-            id="mainProductImage"
-            class="product-image"
-            src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-Lip%20gloss/Olavi%20Beauty-Lip%20gloss-01.jpg"
-            alt="Olavi Beauty 2-in-1 lipstick and lip gloss">
-        </div>
-      </div>
+      
+<div class="gallery">
+  <div class="thumbnail-gallery">
+    <button class="thumb-arrow thumb-up" type="button" aria-label="Previous thumbnails">
+      &#9650;
+    </button>
+
+    <div class="thumbnail-list" aria-label="Product image thumbnails">
+      <button class="thumbnail active" type="button" data-image="0" aria-label="View product image 1">
+        <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-Lip%20gloss/Olavi%20Beauty-Lip%20gloss-01.jpg" alt="Lip gloss product image 1">
+      </button>
+      <button class="thumbnail" type="button" data-image="1" aria-label="View product image 2">
+        <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-Lip%20gloss/Olavi%20Beauty-Lip%20gloss-02.jpg" alt="Lip gloss product image 2">
+      </button>
+      <button class="thumbnail" type="button" data-image="2" aria-label="View product image 3">
+        <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-Lip%20gloss/Olavi%20Beauty-Lip%20gloss-03.jpg" alt="Lip gloss product image 3">
+      </button>
+      <button class="thumbnail" type="button" data-image="3" aria-label="View product image 4">
+        <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-Lip%20gloss/Olavi%20Beauty-Lip%20gloss-04.jpg" alt="Lip gloss product image 4">
+      </button>
+      <button class="thumbnail" type="button" data-image="4" aria-label="View product image 5">
+        <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-Lip%20gloss/Olavi%20Beauty-Lip%20gloss-05.jpg" alt="Lip gloss product image 5">
+      </button>
+    </div>
+
+    <button class="thumb-arrow thumb-down" type="button" aria-label="Next thumbnails">
+      &#9660;
+    </button>
+  </div>
+
+  <div class="main-image-wrap">
+    <img
+      id="mainProductImage"
+      class="product-image"
+      src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-Lip%20gloss/Olavi%20Beauty-Lip%20gloss-01.jpg"
+      alt="Olavi Beauty 2-in-1 lipstick and lip gloss">
+  </div>
+</div>
+
 
       <div class="product-info">
         <p class="eyebrow">OLAVI BEAUTY · B2B BEAUTY SUPPLY</p>
@@ -301,5 +393,64 @@
       <a href="mailto:tina@olavibeauty.com">Contact Us</a>
     </div>
   </footer>
+
+<script>
+  const mainImage = document.getElementById('mainProductImage');
+  const thumbnails = Array.from(document.querySelectorAll('.thumbnail'));
+  const thumbnailList = document.querySelector('.thumbnail-list');
+  const upButton = document.querySelector('.thumb-up');
+  const downButton = document.querySelector('.thumb-down');
+
+  let currentIndex = 0;
+
+  function changeImage(index) {
+    const thumbnail = thumbnails[index];
+    if (!thumbnail) return;
+
+    const thumbnailImage = thumbnail.querySelector('img');
+    mainImage.src = thumbnailImage.src;
+    mainImage.alt = 'Olavi Beauty lip gloss - product image ' + (index + 1);
+
+    thumbnails.forEach(function (item) {
+      item.classList.remove('active');
+    });
+
+    thumbnail.classList.add('active');
+    currentIndex = index;
+  }
+
+  thumbnails.forEach(function (thumbnail, index) {
+    thumbnail.addEventListener('mouseenter', function () {
+      changeImage(index);
+    });
+
+    thumbnail.addEventListener('click', function () {
+      changeImage(index);
+    });
+
+    thumbnail.addEventListener('focus', function () {
+      changeImage(index);
+    });
+  });
+
+  downButton.addEventListener('click', function () {
+    const nextIndex = Math.min(currentIndex + 1, thumbnails.length - 1);
+    changeImage(nextIndex);
+
+    if (nextIndex >= 2) {
+      thumbnailList.scrollTop = thumbnailList.scrollHeight;
+    }
+  });
+
+  upButton.addEventListener('click', function () {
+    const previousIndex = Math.max(currentIndex - 1, 0);
+    changeImage(previousIndex);
+
+    if (previousIndex <= 1) {
+      thumbnailList.scrollTop = 0;
+    }
+  });
+</script>
+
 </body>
 </html>
