@@ -7,58 +7,114 @@
   <meta name="description" content="Wooden cotton swabs with pure cotton tips. Wholesale supply and customization for beauty brands, retailers and distributors.">
   <title>Wooden Cotton Swabs | Olavi Beauty</title>
   <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #292522;
-      background: #fff;
-      line-height: 1.7;
-    }
-    a { color: inherit; text-decoration: none; }
-    header {
-      padding: 20px 6%;
-      border-bottom: 1px solid #eee7e2;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-    .logo { width: 150px; max-width: 45%; }
-    .back { font-size: 14px; color: #76574d; }
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 55px 6%;
-    }
-    .product-layout {
+   
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #352e2a;
+  background: #fff;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Header: match the lip gloss page */
+header {
+  padding: 20px 0;
+  border-bottom: 1px solid #eee6e1;
+}
+
+.container {
+  width: 92%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  display: block;
+  width: 180px;
+  max-width: 48%;
+  height: auto;
+}
+
+.contact-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #9a6356;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.contact-link:hover,
+.cta:hover {
+  background: #805044;
+}
+
+.breadcrumb {
+  padding: 24px 0;
+  color: #806e65;
+  font-size: 14px;
+}
+
+.breadcrumb a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: #9a6356;
+}
+
+/* Main product area */
+main {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 4% 55px;
+}
+
+.product-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
-  gap: 40px;
+  gap: 48px;
   align-items: start;
+  min-width: 0;
 }
-    .product-image {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: contain;
-      background: #f8f4f0;
-      border-radius: 8px;
-    }
-    
+
+/* Product gallery */
 .gallery {
   display: grid;
   grid-template-columns: 76px minmax(0, 1fr);
   gap: 14px;
   align-items: start;
+  width: 100%;
+  min-width: 0;
 }
-
 
 .thumbnail-gallery {
   display: grid;
   grid-template-rows: 24px 352px 24px;
   gap: 8px;
   width: 76px;
-  flex-shrink: 0;
+  min-width: 0;
 }
 
 .thumbnail-list {
@@ -70,28 +126,8 @@
 }
 
 .thumbnail {
-  flex: 0 0 82px;
-  width: 76px;
-  height: 82px;
-}
-
-.thumb-arrow {
-  width: 76px;
-  height: 24px;
-  border: none;
-  border-radius: 4px;
-  background: #f8f4f0;
-  color: #8f5e51;
-  cursor: pointer;
-}
-
-.thumb-arrow:hover {
-  background: #eee2da;
-}
-
-
-.thumbnail {
   display: block;
+  flex: 0 0 76px;
   width: 76px;
   height: 76px;
   padding: 3px;
@@ -115,8 +151,23 @@
   padding: 2px;
 }
 
+.thumb-arrow {
+  width: 76px;
+  height: 24px;
+  border: none;
+  border-radius: 4px;
+  background: #f8f4f0;
+  color: #8f5e51;
+  cursor: pointer;
+}
+
+.thumb-arrow:hover {
+  background: #eee2da;
+}
+
 .main-image-wrap {
   width: 100%;
+  min-width: 0;
   overflow: hidden;
   background: #f8f4f0;
   border-radius: 8px;
@@ -125,33 +176,155 @@
 .main-image-wrap .product-image {
   display: block;
   width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #f8f4f0;
   transition: opacity 0.15s ease;
 }
 
+/* Product information */
+.product-info {
+  min-width: 0;
+  padding-top: 6px;
+}
+
+.eyebrow {
+  color: #a46555;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 12px 0 18px;
+  font-size: clamp(30px, 3.2vw, 46px);
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.intro {
+  margin: 0 0 34px;
+  color: #70655f;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* Product specifications */
+.specs {
+  width: 100%;
+  margin: 24px 0 30px;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.specs td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #eee6e1;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.specs td:first-child {
+  width: 38%;
+  color: #806e65;
+  font-weight: 400;
+}
+
+.specs td:last-child {
+  color: #352e2a;
+}
+
+/* Quote button */
+.cta {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 13px 30px;
+  background: #9a6356;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.quote-help {
+  margin: 14px 0 0;
+  color: #806e65;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+footer {
+  padding: 25px 4%;
+  background: #f8f4f0;
+  color: #655e59;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* Mobile layout */
 @media (max-width: 700px) {
-  .product-layout {
-    grid-template-columns: 1fr;
-    gap: 24px;
+  header {
+    padding: 16px 0;
   }
 
-  /* 手机端改用纵向排列，确保主图在前 */
-  .gallery {
-    display: flex;
-    flex-direction: column;
+  .container {
+    width: calc(100% - 32px);
+  }
+
+  .header-inner {
     gap: 12px;
   }
 
+  .logo {
+    width: 145px;
+    max-width: 48%;
+  }
+
+  .contact-link {
+    padding: 9px 12px;
+    font-size: 11px;
+  }
+
+  .breadcrumb {
+    padding: 18px 0;
+    font-size: 12px;
+  }
+
+  main {
+    padding: 0 16px 40px;
+  }
+
+  .product-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "main"
+      "thumbs";
+    gap: 12px;
+    width: 100%;
+    min-width: 0;
+  }
+
   .main-image-wrap {
-    order: 0;
+    grid-area: main;
     width: 100%;
     min-width: 0;
   }
 
   .thumbnail-gallery {
-    order: 1;
+    grid-area: thumbs;
     display: block;
     width: 100%;
-    flex-shrink: 1;
+    height: auto;
   }
 
   .thumbnail-list {
@@ -175,115 +348,42 @@
   .thumb-arrow {
     display: none;
   }
-}
-}
 
-    .eyebrow {
-      color: #9a6356;
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-    h1 { font-size: clamp(30px, 4vw, 44px); line-height: 1.2; margin: 12px 0 18px; }
-    h2 { font-size: 23px; margin-top: 38px; }
-    .intro { color: #655e59; }
-    .specs {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 22px 0;
-    }
-    .specs td {
-      padding: 12px 10px;
-      border-bottom: 1px solid #eee7e2;
-      vertical-align: top;
-    }
-    .specs td:first-child {
-      width: 42%;
-      font-weight: bold;
-    }
-    .note {
-      background: #f8f4f0;
-      padding: 16px;
-      border-radius: 6px;
-      font-size: 14px;
-    }
-    .cta {
-      display: inline-block;
-      margin-top: 18px;
-      padding: 13px 24px;
-      background: #8f5e51;
-      color: white;
-      border-radius: 4px;
-      font-weight: bold;
-    }
-    .cta:hover { background: #70483e; }
-    footer {
-      text-align: center;
-      padding: 25px 6%;
-      background: #f8f4f0;
-      color: #655e59;
-      font-size: 13px;
-    }
-    @media (max-width: 700px) {
-      header { padding: 16px 5%; }
-      main { padding: 30px 5%; }
-      .product-layout { grid-template-columns: 1fr; gap: 25px; }
-      h2 { margin-top: 28px; }
-    }
-    /* Mobile gallery order fix */
-@media (max-width: 700px) {
-  .gallery {
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr) !important;
-    grid-template-areas:
-      "main"
-      "thumbs" !important;
-    gap: 12px !important;
-    align-items: start;
+  .product-info {
+    padding-top: 0;
   }
 
-  .main-image-wrap {
-    grid-area: main !important;
-    order: 0 !important;
-    width: 100%;
-    min-width: 0;
+  h1 {
+    font-size: 30px;
   }
 
-  .thumbnail-gallery {
-    grid-area: thumbs !important;
-    order: 1 !important;
-    display: block !important;
-    width: 100% !important;
-    height: auto !important;
+  .intro {
+    margin-bottom: 24px;
+    font-size: 16px;
   }
 
-  .thumbnail-list {
-    display: flex !important;
-    flex-direction: row !important;
-    width: 100%;
-    height: auto !important;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-    gap: 8px;
-    padding-bottom: 6px;
-    -webkit-overflow-scrolling: touch;
+  .specs {
+    margin: 20px 0 26px;
+    font-size: 14px;
   }
 
-  .thumbnail {
-    flex: 0 0 62px !important;
-    width: 62px !important;
-    height: 62px !important;
+  .specs td {
+    padding: 12px 8px;
   }
 
-  .thumb-arrow {
-    display: none !important;
+  .specs td:first-child {
+    width: 40%;
+  }
+
+  .cta {
+    padding: 12px 22px;
   }
 }
   </style>
 </head>
 <body>
-  <header>
+  
+<header>
   <div class="container header-inner">
     <a href="index.html" aria-label="Olavi Beauty home">
       <img
@@ -293,6 +393,16 @@
     </a>
     <a class="contact-link" href="#inquiry">CONTACT US</a>
   </div>
+</header>
+
+<div class="container">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> /
+    <a href="index.html#products">Products</a> /
+    Wooden Cotton Swabs
+  </div>
+</div>
+
 </header>
 
   <main>
@@ -342,31 +452,49 @@
 </div>
 
 
-      <section>
-        <div class="eyebrow">Wholesale · Private Label</div>
-        <h1>Wooden Cotton Swabs</h1>
-        <p class="intro">
-          Wooden cotton swabs with pure cotton tips for personal care
-          and beauty applications. Suitable for beauty brands, retailers
-          and distributors seeking wholesale supply.
-        </p>
+      
+<section class="product-info">
+  <div class="eyebrow">OLAVI BEAUTY · B2B BEAUTY SUPPLY</div>
 
-        <h2>Product Specifications</h2>
-        <table class="specs">
-          <tr><td>Stick Material</td><td>Wood</td></tr>
-          <tr><td>Tip Material</td><td>Pure Cotton</td></tr>
-          <tr><td>Pack Options</td><td>60 / 80 / 100 pieces per bag</td></tr>
-          <tr><td>Minimum Order</td><td>100 bags</td></tr>
-          <tr><td>Customization</td><td>Available for orders of 30,000 bags or more</td></tr>
-        </table>
+  <h1>Wooden Cotton Swabs</h1>
 
-        <div class="note">
-          Need a different packaging option or a customized solution?
-          Contact us to discuss your requirements.
-        </div>
+  <p class="intro">
+    Wooden cotton swabs with pure cotton tips for personal care and
+    beauty applications. Suitable for beauty brands, retailers and
+    distributors seeking wholesale supply.
+  </p>
 
-        <a class="cta" href="index.html#contact">Request a Quote ↗</a>
-      </section>
+  <table class="specs">
+    <tr>
+      <td>Stick Material</td>
+      <td>Wood</td>
+    </tr>
+    <tr>
+      <td>Tip Material</td>
+      <td>Pure Cotton</td>
+    </tr>
+    <tr>
+      <td>Pack Options</td>
+      <td>60 / 80 / 100 pieces per bag</td>
+    </tr>
+    <tr>
+      <td>Minimum Order</td>
+      <td>100 bags</td>
+    </tr>
+    <tr>
+      <td>Customization</td>
+      <td>Available for orders of 30,000 bags or more</td>
+    </tr>
+  </table>
+
+  <a class="cta" id="inquiry" href="index.html#contact">
+    REQUEST A QUOTE
+  </a>
+
+  <p class="quote-help">
+    Tell us your target quantity and requirements. Our team will follow up with you.
+  </p>
+</section>
     </div>
   </main>
 
