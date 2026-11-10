@@ -8,10 +8,11 @@
   <style>
 * {
   box-sizing: border-box;
+  margin:0;
+  padding:0;
 }
 
 body {
-  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: #352e2a;
   background: #fff;
@@ -23,23 +24,52 @@ a {
   text-decoration: none;
 }
 
+/* 头部样式 和棉签页保持一致 */
 header {
-  padding: 20px 0;
-  border-bottom: 1px solid #eee6e1;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  padding:20px 40px;
+  border-bottom:1px solid #eee;
+}
+.logo-img{
+  height:70px;
+}
+.contact-btn{
+  background:#9b654e;
+  color:#fff;
+  padding:10px 22px;
+  border-radius:4px;
+  font-weight:500;
+}
+.contact-btn:hover{
+  opacity:0.9;
 }
 
 .container {
   width: 92%;
   max-width: 1200px;
   margin: 0 auto;
+  padding:30px 0;
+}
+.breadcrumb{
+  color:#777;
+  font-size:15px;
+  margin-bottom:20px;
+}
+.breadcrumb a{
+  color:#9b654e;
 }
 
 .page-title{
-  font-size:32px;
-  margin:32px 0 12px;
+  font-size:42px;
+  margin-bottom:16px;
+  font-weight:bold;
 }
 .page-desc{
-  color:#666;
+  color:#555;
+  font-size:16px;
+  max-width:900px;
   margin-bottom:36px;
 }
 
@@ -82,18 +112,15 @@ header {
 </head>
 <body>
 <header>
-  <div class="container">
-    <a href="index.html"><strong>Olavi Beauty</strong></a>
-    <nav style="float:right;">
-      <a href="index.html" style="margin:0 12px;">Home</a>
-      <a href="cotton-swabs.html" style="margin:0 12px;">Products</a>
-      <a href="about.html" style="margin:0 12px;">About Us</a>
-      <a href="certificates.html" style="margin:0 12px;">Certificates</a>
-      <a href="contact.html" style="margin:0 12px;">Contact Us</a>
-    </nav>
-  </div>
+  <a href="index.html">
+    <img class="logo-img" src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-%20logo-2.png" alt="Olavi Beauty Logo">
+  </a>
+  <a class="contact-btn" href="contact.html">CONTACT US</a>
 </header>
 <div class="container">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> / Makeup Mirrors
+  </div>
   <h1 class="page-title">Makeup Mirrors</h1>
   <p class="page-desc">Portable LED makeup mirrors, foldable hand mirrors, wholesale & OEM service available.</p>
 
