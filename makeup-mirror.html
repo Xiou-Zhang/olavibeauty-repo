@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Square Double-sided LED Makeup Mirror, hot selling ins style mini foldable portable hand makeup mirror with LED light.">
+  <meta name="description" content="Square Double-sided LED Makeup Mirror, hot selling ins style mini mirror, delicate portable foldable hand mirror with LED light for beauty brands, retailers and distributors wholesale.">
   <title>Square Double-sided LED Makeup Mirror | Olavi Beauty</title>
   <style>
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: #352e2a;
   background: #fff;
@@ -23,95 +24,149 @@ a {
   text-decoration: none;
 }
 
+/* 头部 和全站统一 */
 header {
-  padding: 20px 0;
-  border-bottom: 1px solid #eee6e1;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  padding:20px 40px;
+  border-bottom:1px solid #eee;
+}
+.logo-img{
+  height:70px;
+}
+.contact-btn{
+  background:#9b654e;
+  color:#fff;
+  padding:10px 22px;
+  border-radius:4px;
+  font-weight:500;
+}
+.contact-btn:hover{
+  opacity:0.9;
 }
 
 .container {
   width: 92%;
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
+  padding:30px 0;
 }
-
-.back-link {
-  display: inline-block;
-  margin:24px 0;
-  color:#885b42;
+.breadcrumb{
+  color:#777;
+  font-size:15px;
+  margin-bottom:30px;
 }
-.back-link:hover{
-  text-decoration: underline;
+.breadcrumb a{
+  color:#9b654e;
 }
 
 .product-wrap{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap:40px;
-  margin:30px 0 60px;
+  gap:48px;
+  align-items: start;
 }
 @media(max-width:768px){
   .product-wrap{
     grid-template-columns: 1fr;
-    gap:24px;
   }
 }
 
-.main-img-box img{
-  width:100%;
-  border-radius:8px;
-  display:block;
-}
-.thumb-list{
+.img-main-box{
   display:flex;
-  gap:12px;
-  margin-top:16px;
-  flex-wrap:wrap;
+  gap:16px;
 }
-.thumb-list img{
-  width:80px;
-  height:80px;
+.thumb-column{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  width:72px;
+}
+.thumb-column img{
+  width:100%;
+  height:72px;
   object-fit:cover;
   border-radius:4px;
   cursor:pointer;
   border:2px solid transparent;
 }
-.thumb-list img.active{
-  border-color:#885b42;
+.thumb-column img.active{
+  border-color:#9b654e;
+}
+.big-img{
+  flex:1;
+}
+.big-img img{
+  width:100%;
+  border-radius:8px;
+  display:block;
 }
 
-.product-info h1{
-  font-size:28px;
-  margin-top:0;
-  margin-bottom:16px;
+.info-block .tag-top{
+  color:#9b654e;
+  font-size:14px;
+  letter-spacing:1px;
+  margin-bottom:8px;
 }
-.product-info .desc{
-  font-size:16px;
+.info-block h1{
+  font-size:40px;
+  line-height:1.2;
+  margin-bottom:20px;
+}
+.info-block .desc-text{
   color:#555;
-  margin-bottom:24px;
+  margin-bottom:32px;
 }
-.spec-item{
-  padding:12px 0;
+
+.spec-table{
+  width:100%;
+  margin-bottom:36px;
+}
+.spec-table tr{
   border-bottom:1px solid #eee;
 }
-.spec-item strong{
-  color:#352e2a;
+.spec-table td{
+  padding:12px 0;
+}
+.spec-table td:first-child{
+  color:#777;
+  width:180px;
+}
+
+.quote-btn{
+  display:inline-block;
+  background:#9b654e;
+  color:#fff;
+  padding:14px 32px;
+  border-radius:4px;
+  font-weight:bold;
+}
+.quote-btn:hover{
+  opacity:0.9;
+}
+.quote-tip{
+  margin-top:10px;
+  font-size:14px;
+  color:#777;
 }
   </style>
 </head>
 <body>
 <header>
-  <div class="container">
-    <a href="index.html"><strong>Olavi Beauty</strong></a>
-  </div>
+  <a href="index.html">
+    <img class="logo-img" src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-%20logo-2.png" alt="Olavi Beauty Logo">
+  </a>
+  <a class="contact-btn" href="contact.html">CONTACT US</a>
 </header>
 <div class="container">
-  <!-- ✅ 返回链接：回到化妆镜分类列表页 -->
-  <a class="back-link" href="makeup-mirrors-list.html">← Back to Makeup Mirrors</a>
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> / <a href="makeup-mirrors-list.html">Products</a> / Square Double-sided LED Makeup Mirror
+  </div>
 
   <div class="product-wrap">
-    <div class="main-img-box">
-      <img id="mainImg" src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type01/Olavi%20Beauty-Makeup%20mirror-type1-01.jpeg" alt="Square Double-sided LED Makeup Mirror">
-      <div class="thumb-list">
+    <div class="img-main-box">
+      <div class="thumb-column">
         <img onclick="changeImg(this)" class="active" src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type01/Olavi%20Beauty-Makeup%20mirror-type1-01.jpeg">
         <img onclick="changeImg(this)" src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type01/Olavi%20Beauty-Makeup%20mirror-type1-02.jpeg">
         <img onclick="changeImg(this)" src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type01/Olavi%20Beauty-Makeup%20mirror-type1-03.jpeg">
@@ -119,22 +174,41 @@ header {
         <img onclick="changeImg(this)" src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type01/Olavi%20Beauty-Makeup%20mirror-type1-05.jpeg">
         <img onclick="changeImg(this)" src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type01/Olavi%20Beauty-Makeup%20mirror-type1-06.jpeg">
       </div>
+      <div class="big-img">
+        <img id="mainImg" src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type01/Olavi%20Beauty-Makeup%20mirror-type1-01.jpeg" alt="Square Double-sided LED Makeup Mirror">
+      </div>
     </div>
-    <div class="product-info">
+
+    <div class="info-block">
+      <div class="tag-top">OLAVI BEAUTY · B2B BEAUTY SUPPLY</div>
       <h1>Square Double-sided LED Makeup Mirror</h1>
-      <p class="desc">Hot selling LED makeup mirror, ins style mini mirror, delicate portable foldable hand mirror with LED light. It is exquisite, easy to carry, ideal for daily makeup & retail wholesale.</p>
-      <div class="spec-item">
-        <strong>Product Name:</strong> Square Double-sided LED Makeup Mirror
-      </div>
-      <div class="spec-item">
-        <strong>Feature:</strong> Double-sided, built-in LED light, foldable, portable
-      </div>
-      <div class="spec-item">
-        <strong>Usage:</strong> Daily makeup, travel, gift
-      </div>
-      <div class="spec-item">
-        <strong>Service:</strong> OEM & ODM, bulk wholesale available
-      </div>
+      <p class="desc-text">Hot selling LED makeup mirror, ins style mini mirror, delicate portable foldable hand mirror with LED light.</p>
+
+      <table class="spec-table">
+        <tr>
+          <td>Product Name</td>
+          <td>Square Double-sided LED Makeup Mirror</td>
+        </tr>
+        <tr>
+          <td>Feature</td>
+          <td>Double-sided mirror, LED fill light, portable foldable, rechargeable</td>
+        </tr>
+        <tr>
+          <td>Business Service</td>
+          <td>Bulk wholesale, private label / OEM service</td>
+        </tr>
+        <tr>
+          <td>Target Customer</td>
+          <td>Beauty brands, retailers, distributors</td>
+        </tr>
+        <tr>
+          <td>MOQ</td>
+          <td>Negotiable</td>
+        </tr>
+      </table>
+
+      <a class="quote-btn" href="contact.html">REQUEST A QUOTE</a>
+      <p class="quote-tip">Tell us your target quantity and requirements. Our team will follow up with you.</p>
     </div>
   </div>
 </div>
@@ -142,7 +216,7 @@ header {
 <script>
 function changeImg(el){
   document.getElementById('mainImg').src = el.src;
-  document.querySelectorAll('.thumb-list img').forEach(i=>i.classList.remove('active'));
+  document.querySelectorAll('.thumb-column img').forEach(i=>i.classList.remove('active'));
   el.classList.add('active');
 }
 </script>
