@@ -1,1 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Smart LED Makeup Mirror, LED makeup mirrors for beauty brands, retailers and distributors. Wholesale and private label inquiries welcome.">
+  <title>Smart LED Makeup Mirror | Olavi Beauty</title>
+  <style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #352e2a;
+  background: #fff;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header {
+  padding: 20px 0;
+  border-bottom: 1px solid #eee6e1;
+}
+
+.container {
+  width: 92%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.back-link {
+  display: inline-block;
+  margin:24px 0;
+  color:#885b42;
+}
+.back-link:hover{
+  text-decoration: underline;
+}
+
+.product-wrap{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap:40px;
+  margin:30px 0 60px;
+}
+@media(max-width:768px){
+  .product-wrap{
+    grid-template-columns: 1fr;
+    gap:24px;
+  }
+}
+
+.main-img-box img{
+  width:100%;
+  border-radius:8px;
+  display:block;
+}
+.thumb-list{
+  display:flex;
+  gap:12px;
+  margin-top:16px;
+  flex-wrap:wrap;
+}
+.thumb-list img{
+  width:80px;
+  height:80px;
+  object-fit:cover;
+  border-radius:4px;
+  cursor:pointer;
+  border:2px solid transparent;
+}
+.thumb-list img.active{
+  border-color:#885b42;
+}
+
+.product-info h1{
+  font-size:28px;
+  margin-top:0;
+  margin-bottom:16px;
+}
+.product-info .desc{
+  font-size:16px;
+  color:#555;
+  margin-bottom:24px;
+}
+.spec-item{
+  padding:12px 0;
+  border-bottom:1px solid #eee;
+}
+.spec-item strong{
+  color:#352e2a;
+}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <a href="index.html"><strong>Olavi Beauty</strong></a>
+  </div>
+</header>
+<div class="container">
+  <a class="back-link" href="makeup-mirrors-list.html">← Back to Makeup Mirrors</a>
+
+  <div class="product-wrap">
+    <div class="main-img-box">
+      <img id="mainImg" src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Olavi%20Beauty-LED%20Makeup%20mirror-01.jpg" alt="Smart LED Makeup Mirror">
+      <div class="thumb-list">
+        <img onclick="changeImg(this)" class="active" src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Olavi%20Beauty-LED%20Makeup%20mirror-01.jpg">
+        <img onclick="changeImg(this)" src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Olavi%20Beauty-LED%20Makeup%20mirror-02.jpg">
+        <img onclick="changeImg(this)" src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Olavi%20Beauty-LED%20Makeup%20mirror-03.jpg">
+        <img onclick="changeImg(this)" src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Olavi%20Beauty-LED%20Makeup%20mirror-04.jpg">
+        <img onclick="changeImg(this)" src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Olavi%20Beauty-%20LED%20Makeup%20mirror-05.jpg">
+        <img onclick="changeImg(this)" src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Olavi%20Beauty-LED%20Makeup%20mirror-06.jpg">
+      </div>
+    </div>
+    <div class="product-info">
+      <h1>Smart LED Makeup Mirror</h1>
+      <p class="desc">LED makeup mirrors for beauty brands, retailers and distributors. Wholesale and private label inquiries welcome.</p>
+      <div class="spec-item">
+        <strong>Product Name:</strong> Smart LED Makeup Mirror
+      </div>
+      <div class="spec-item">
+        <strong>Feature:</strong> Built-in LED light, adjustable brightness, desktop makeup mirror
+      </div>
+      <div class="spec-item">
+        <strong>Business:</strong> Bulk wholesale, private label / OEM service
+      </div>
+      <div class="spec-item">
+        <strong>Target Customer:</strong> Beauty brands, retailers, distributors
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function changeImg(el){
+  document.getElementById('mainImg').src = el.src;
+  document.querySelectorAll('.thumb-list img').forEach(i=>i.classList.remove('active'));
+  el.classList.add('active');
+}
+</script>
+</body>
+</html>
 
