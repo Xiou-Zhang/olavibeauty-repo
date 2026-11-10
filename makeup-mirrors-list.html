@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="7 inch dual-sided LED desktop makeup mirror, double sided cosmetic mirror with LED fill light for wholesale OEM.">
-  <title>7 Inch Dual-Sided LED Desktop Mirror | Olavi Beauty</title>
+  <meta name="description" content="Olavi Beauty LED makeup mirrors & barber mirrors wholesale, OEM private label available.">
+  <title>Makeup Mirrors | Olavi Beauty</title>
   <style>
 * {
   box-sizing: border-box;
@@ -24,7 +24,6 @@ a {
   text-decoration: none;
 }
 
-/* 头部 和全站统一 */
 header {
   display:flex;
   justify-content: space-between;
@@ -50,105 +49,47 @@ header {
   width: 92%;
   max-width: 1280px;
   margin: 0 auto;
-  padding:30px 0;
+  padding:40px 0;
 }
-.breadcrumb{
+.page-title{
+  font-size:34px;
+  margin-bottom:10px;
+}
+.page-sub{
   color:#777;
-  font-size:15px;
-  margin-bottom:30px;
-}
-.breadcrumb a{
-  color:#9b654e;
+  margin-bottom:40px;
 }
 
-.product-wrap{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap:48px;
-  align-items: start;
+.grid-wrap{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
+  gap:32px;
 }
-@media(max-width:768px){
-  .product-wrap{
-    grid-template-columns: 1fr;
-  }
-}
-
-.img-main-box{
-  display:flex;
-  gap:16px;
-}
-.thumb-column{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-  width:72px;
-}
-.thumb-column img{
-  width:100%;
-  height:72px;
-  object-fit:cover;
-  border-radius:4px;
-  cursor:pointer;
-  border:2px solid transparent;
-}
-.thumb-column img.active{
-  border-color:#9b654e;
-}
-.big-img{
-  flex:1;
-}
-.big-img img{
-  width:100%;
+.card{
+  border:1px solid #eee6e1;
   border-radius:8px;
+  overflow:hidden;
+  transition: 0.25s ease;
+}
+.card:hover{
+  box-shadow: 0 8px 20px #00000014;
+}
+.card img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
   display:block;
 }
-
-.info-block .tag-top{
-  color:#9b654e;
+.card-text{
+  padding:20px;
+}
+.card-text h3{
+  font-size:18px;
+  margin-bottom:10px;
+}
+.card-text p{
   font-size:14px;
-  letter-spacing:1px;
-  margin-bottom:8px;
-}
-.info-block h1{
-  font-size:40px;
-  line-height:1.2;
-  margin-bottom:20px;
-}
-.info-block .desc-text{
-  color:#555;
-  margin-bottom:32px;
-}
-
-.spec-table{
-  width:100%;
-  margin-bottom:36px;
-}
-.spec-table tr{
-  border-bottom:1px solid #eee;
-}
-.spec-table td{
-  padding:12px 0;
-}
-.spec-table td:first-child{
-  color:#777;
-  width:180px;
-}
-
-.quote-btn{
-  display:inline-block;
-  background:#9b654e;
-  color:#fff;
-  padding:14px 32px;
-  border-radius:4px;
-  font-weight:bold;
-}
-.quote-btn:hover{
-  opacity:0.9;
-}
-.quote-tip{
-  margin-top:10px;
-  font-size:14px;
-  color:#777;
+  color:#666;
 }
   </style>
 </head>
@@ -159,66 +100,57 @@ header {
   </a>
   <a class="contact-btn" href="contact.html">CONTACT US</a>
 </header>
+
 <div class="container">
-  <div class="breadcrumb">
-    <a href="index.html">Home</a> / <a href="makeup-mirrors-list.html">Products</a> / 7 Inch Dual-Sided LED Desktop Mirror
-  </div>
+  <h1 class="page-title">Makeup & Barber Mirrors</h1>
+  <p class="page-sub">LED cosmetic mirrors, foldable barber mirrors for wholesale & OEM service</p>
 
-  <div class="product-wrap">
-    <div class="img-main-box">
-      <div class="thumb-column">
-        <img onclick="changeImg(this)" class="active" src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type04/Olavi%20Beauty-Makeup%20mirror-type4-01.jpeg">
-        <img onclick="changeImg(this)" src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type04/Olavi%20Beauty-Makeup%20mirror-type4-02.jpeg">
-        <img onclick="changeImg(this)" src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type04/Olavi%20Beauty-Makeup%20mirror-type4-03.jpeg">
-        <img onclick="changeImg(this)" src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type04/Olavi%20Beauty-Makeup%20mirror-type4-06.jpeg">
-        <img onclick="changeImg(this)" src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type04/Olavi%20Beauty-Makeup%20mirror-type4-08.jpeg">
-        <img onclick="changeImg(this)" src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type04/Olavi%20Beauty-Makeup%20mirror-type4-012.jpeg">
+  <div class="grid-wrap">
+    <!-- 第1款：Square Double-sided LED Makeup Mirror -->
+    <a href="makeup-mirror.html" class="card">
+      <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type01/Olavi%20Beauty-Makeup%20mirror-type1-01.jpeg" alt="Square Double-sided LED Makeup Mirror">
+      <div class="card-text">
+        <h3>Square Double-sided LED Makeup Mirror</h3>
+        <p>Hot selling ins style mini mirror, portable foldable hand mirror with LED light.</p>
       </div>
-      <div class="big-img">
-        <img id="mainImg" src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type04/Olavi%20Beauty-Makeup%20mirror-type4-01.jpeg" alt="7 Inch Dual-Sided LED Desktop Mirror">
+    </a>
+
+    <!-- 第2款：Smart LED Mirror -->
+    <a href="smart-led-mirror.html" class="card">
+      <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Olavi%20Beauty-LED%20Makeup%20mirror-01.jpg" alt="Smart LED Mirror">
+      <div class="card-text">
+        <h3>Smart LED Mirror</h3>
+        <p>Smart touch control LED makeup mirror, multi brightness adjustable, desktop cosmetic mirror.</p>
       </div>
-    </div>
+    </a>
 
-    <div class="info-block">
-      <div class="tag-top">OLAVI BEAUTY · B2B BEAUTY SUPPLY</div>
-      <h1>7 Inch Dual-Sided LED Desktop Mirror</h1>
-      <p class="desc-text">7 inch dual-sided desktop makeup mirror, double side design with LED fill light, ideal for daily makeup application.</p>
+    <!-- 第3款：Tri-fold Retractable Hanging LED Barber Mirror -->
+    <a href="tri-fold-barber-mirror.html" class="card">
+      <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type02/Olavi%20Beauty-Makeup%20mirror-type2-010.jpeg" alt="Tri-fold Retractable Hanging LED Barber Mirror">
+      <div class="card-text">
+        <h3>Tri-fold Retractable Hanging LED Barber Mirror</h3>
+        <p>Retractable hanging three-sided folding mirror with LED light, simple European and American style.</p>
+      </div>
+    </a>
 
-      <table class="spec-table">
-        <tr>
-          <td>Product Name</td>
-          <td>7 Inch Dual-Sided LED Desktop Mirror</td>
-        </tr>
-        <tr>
-          <td>Feature</td>
-          <td>7 inch, dual-sided design, LED fill light, desktop standing cosmetic mirror</td>
-        </tr>
-        <tr>
-          <td>Business Service</td>
-          <td>Bulk wholesale, private label / OEM service</td>
-        </tr>
-        <tr>
-          <td>Target Customer</td>
-          <td>Beauty brands, salons, retailers, distributors</td>
-        </tr>
-        <tr>
-          <td>MOQ</td>
-          <td>Negotiable</td>
-        </tr>
-      </table>
+    <!-- 第4款：6 Inch 10/20/30X Rechargeable LED Stand Mirror -->
+    <a href="6inch-magnifying-led-mirror.html" class="card">
+      <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type03/Olavi%20Beauty-Makeup%20mirror-type3-01.jpeg" alt="6 Inch 10/20/30X Rechargeable LED Stand Mirror">
+      <div class="card-text">
+        <h3>6 Inch 10/20/30X Rechargeable LED Stand Mirror</h3>
+        <p>6 inch 10X/20X/30X magnifying rechargeable LED mirror, 360° rotatable bracket with fill light.</p>
+      </div>
+    </a>
 
-      <a class="quote-btn" href="contact.html">REQUEST A QUOTE</a>
-      <p class="quote-tip">Tell us your target quantity and requirements. Our team will follow up with you.</p>
-    </div>
+    <!-- 第5款：7 Inch Dual-Sided LED Desktop Mirror -->
+    <a href="7inch-dual-sided-led-mirror.html" class="card">
+      <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type04/Olavi%20Beauty-Makeup%20mirror-type4-01.jpeg" alt="7 Inch Dual-Sided LED Desktop Mirror">
+      <div class="card-text">
+        <h3>7 Inch Dual-Sided LED Desktop Mirror</h3>
+        <p>7 inch dual-sided desktop makeup mirror, double side design with LED fill light.</p>
+      </div>
+    </a>
   </div>
 </div>
-
-<script>
-function changeImg(el){
-  document.getElementById('mainImg').src = el.src;
-  document.querySelectorAll('.thumb-column img').forEach(i=>i.classList.remove('active'));
-  el.classList.add('active');
-}
-</script>
 </body>
 </html>
