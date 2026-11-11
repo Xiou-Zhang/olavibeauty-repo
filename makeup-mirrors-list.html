@@ -1,322 +1,489 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Olavi Beauty LED makeup mirrors & barber mirrors wholesale, OEM private label available.">
-  <title>Makeup Mirrors | Olavi Beauty</title>
-  <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Olavi Beauty LED Makeup Mirrors wholesale, private label available.">
+<title>Makeup Mirrors | Olavi Beauty</title>
+<style>
+:root{--ink:#252321;--muted:#716b65;--cream:#faf7f2;--pink:#ead7d0;--accent:#9a6356;--line:#e8e0d9}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--ink);
+  line-height:1.6
 }
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #352e2a;
-  background: #fff;
-  line-height: 1.7;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-/* 顶部公告栏 */
-.top-bar{
-  background:#292522;
-  color:#ffffff;
-  text-align:center;
-  padding:12px;
-  font-size:16px;
-  letter-spacing:1px;
-}
-
-/* 导航容器 */
-.nav-wrap{
-  display:flex;
-  justify-content: space-between;
-  align-items:center;
-  padding:20px 40px;
-  border-bottom:1px solid #eee6e1;
-  position:relative;
-}
-.logo-img{
-  height:70px;
-}
-/* 主导航菜单 */
-.main-nav{
-  display:flex;
-  gap:48px;
-  align-items:center;
-  font-size:20px;
-}
-.nav-item{
-  position:relative;
-  cursor:pointer;
-}
-/* 下拉菜单 */
-.nav-dropdown{
-  position:absolute;
-  top:100%;
-  left:0;
-  background:#fff;
-  box-shadow:0 4px 12px rgba(0,0,0,0.08);
-  min-width:240px;
-  display:none;
-  z-index:99;
-}
-.nav-dropdown a{
-  display:block;
-  padding:14px 20px;
-}
-.nav-dropdown a:hover{
-  background:#f7f3f0;
-}
-.nav-item:hover .nav-dropdown{
-  display:block;
-}
-.contact-btn{
+a{color:inherit;text-decoration:none}
+.top{
   background:#292522;
   color:#fff;
-  padding:14px 26px;
-  font-weight:500;
-  font-size:20px;
+  text-align:center;
+  padding:9px;
+  font-size:12px;
+  letter-spacing:1px;
 }
-.contact-btn:hover{
-  opacity:0.9;
+.nav{
+  height:76px;
+  padding:0 7%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px
 }
-
-.container {
-  width: 92%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding:40px 0;
+.logo{
+  display:flex;
+  align-items:center;
+  flex-shrink:0;
+}
+.logo img{
+  display:block;
+  height:52px;
+  width:auto;
+  max-width:180px;
+  object-fit:contain;
+}
+.links{
+  display:flex;
+  gap:25px;
+  font-size:13px;
+  align-items:center;
+}
+.links > a,
+.dropdown-toggle {
+  display: inline-block;
+  padding: 12px 0;
+  white-space: nowrap;
+}
+.nav-dropdown {
+  position: relative;
+}
+.dropdown-toggle::after {
+  content: " ▾";
+  font-size: 10px;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -12px;
+  min-width: 210px;
+  padding: 8px 0;
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+}
+.dropdown-menu a {
+  display: block;
+  padding: 10px 14px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+.dropdown-menu a:hover {
+  background: var(--cream);
+  color: var(--accent);
+}
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+.btn{
+  display:inline-block;
+  background:var(--ink);
+  color:white;
+  padding:13px 21px;
+  font-size:12px;
+  letter-spacing:1px;
+  border:1px solid var(--ink)
+}
+main{
+  max-width:1240px;
+  margin:0 auto;
+  padding:50px 7%;
 }
 .breadcrumb{
-  color:#777;
-  font-size:15px;
-  margin-bottom:20px;
+  font-size:13px;
+  color:var(--muted);
+  margin-bottom:24px;
 }
 .breadcrumb a{
-  color:#9b654e;
+  color:var(--ink);
 }
 .page-title{
-  font-size:34px;
-  margin-bottom:10px;
+  font-family:Georgia,serif;
+  font-size:37px;
+  font-weight:normal;
+  margin-bottom:32px;
 }
-.page-sub{
-  color:#777;
-  margin-bottom:40px;
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:23px;
 }
-
-.grid-wrap{
-  display:grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
-  gap:32px;
-}
-.card{
-  border:1px solid #eee6e1;
-  border-radius:8px;
+.product-card{
+  border:1px solid var(--line);
   overflow:hidden;
-  transition: 0.25s ease;
+  transition:0.25s ease;
 }
-.card:hover{
-  box-shadow: 0 8px 20px #00000014;
+.product-card:hover{
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
-.card img{
+.card-img-wrap{
   width:100%;
-  height:260px;
-  object-fit:cover;
+  aspect-ratio:1 / 1;
+  background:var(--cream);
+}
+.card-img-wrap img{
+  width:100%;
+  height:auto;
+  object-fit:contain;
   display:block;
 }
 .card-text{
-  padding:20px;
+  padding:16px;
 }
-.card-text h3{
-  font-size:18px;
-  margin-bottom:10px;
+.card-name{
+  font-family:Georgia,serif;
+  font-size:22px;
+  font-weight:normal;
+  margin:0 0 6px;
 }
-.card-text p{
-  font-size:14px;
-  color:#666;
+.card-desc{
+  font-size:13px;
+  color:var(--muted);
+  margin:0 0 12px;
 }
-  </style>
+.learn{
+  font-size:11px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  border-bottom:1px solid var(--accent);
+  padding-bottom:4px;
+  display:inline-block;
+}
+.footer{
+  background:#292522;
+  color:white;
+  padding:35px 8%;
+  margin-top:60px;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  font-size:12px
+}
+@media(max-width:700px){
+  .nav{
+    padding:12px 5%;
+    height:auto;
+    min-height:70px;
+    flex-wrap:wrap;
+  }
+  .links {
+    width: 100%;
+    gap: 15px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    align-items: center;
+  }
+  .dropdown-menu {
+    left: 0;
+    min-width: 190px;
+  }
+  .dropdown-menu a {
+    padding: 12px 14px;
+  }
+  .nav .btn{
+    padding:9px 12px;
+  }
+  .page-title{
+    font-size:31px;
+  }
+  .product-grid {
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+@media(max-width:480px){
+  .product-grid {
+    grid-template-columns:1fr;
+  }
+  .footer{
+    flex-direction:column;
+  }
+}
+</style>
 </head>
 <body>
-<!-- 顶部公告栏 -->
-<div class="top-bar">B2B BEAUTY SUPPLY · WHOLESALE · PRIVATE LABEL INQUIRIES</div>
+<div class="top">B2B BEAUTY SUPPLY · WHOLESALE · PRIVATE LABEL INQUIRIES</div>
+<header class="nav">
+<a class="logo" href="index.html" aria-label="Olavi Beauty Home">
+  <img
+    src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-%20logo-2.png"
+    alt="Olavi Beauty"
+  >
+</a>
 
-<!-- 导航栏（带Products下拉菜单） -->
-<div class="nav-wrap">
-  <a href="index.html">
-    <img class="logo-img" src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-%20logo-2.png" alt="Olavi Beauty Logo">
-  </a>
-  <div class="main-nav">
-    <div class="nav-item">
-      <a href="index.html">Home</a>
-    </div>
-    <div class="nav-item">
-      Products ▾
-      <div class="nav-dropdown">
-        <a href="cotton-swabs.html">Wooden Cotton Swabs</a>
-        <a href="lipstick.html">Lipstick & Lip Gloss</a>
-        <a href="makeup-mirrors.html">Makeup Mirrors</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="about.html">About Us</a>
-    </div>
-    <div class="nav-item">
-      Certificates ▾
-      <div class="nav-dropdown">
-        <a href="cert1.html">Certificate 1</a>
-        <a href="cert2.html">Certificate 2</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="contact.html">Contact Us</a>
+<nav class="links">
+  <a href="index.html">Home</a>
+
+  <div class="nav-dropdown">
+    <a href="#products" class="dropdown-toggle">Products</a>
+    <div class="dropdown-menu">
+      <a href="cotton-swabs.html">Wooden Cotton Swabs</a>
+      <a href="lipstick-lipgloss-list.html">Lipstick &amp; Lip Gloss</a>
+      <a href="makeup-mirrors-list.html">Makeup Mirrors</a>
     </div>
   </div>
-  <a class="contact-btn" href="contact.html">CONTACT US</a>
-</div>
 
-<div class="container">
+  <a href="about-us.html">About Us</a>
+
+  <div class="nav-dropdown">
+    <a href="#certificate" class="dropdown-toggle">Certificates</a>
+    <div class="dropdown-menu">
+      <a href="#certificate">Our Certificate</a>
+    </div>
+  </div>
+
+  <a href="#contact">Contact Us</a>
+</nav>
+
+<a class="btn" href="#contact">CONTACT US</a>
+</header>
+<main>
   <div class="breadcrumb">
-    <a href="index.html">Home</a> / Makeup & Barber Mirrors
+    <a href="index.html">Home</a> / <span>Makeup Mirrors</span>
   </div>
-  <h1 class="page-title">Makeup & Barber Mirrors</h1>
-  <p class="page-sub">LED cosmetic mirrors, foldable barber mirrors for wholesale & OEM service</p>
-
-  <div class="grid-wrap">
+  <h1 class="page-title">Makeup Mirrors</h1>
+  <div class="product-grid">
     <!-- 第1款：Square Double-sided LED Makeup Mirror -->
-    <a href="makeup-mirror.html" class="card">
-      <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type01/Olavi%20Beauty-Makeup%20mirror-type1-01.jpeg" alt="Square Double-sided LED Makeup Mirror">
+    <div class="product-card">
+      <a href="makeup-mirror.html">
+        <div class="card-img-wrap">
+          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type01/Olavi%20Beauty-Makeup%20mirror-type1-01.jpeg" alt="Square Double-sided LED Makeup Mirror">
+        </div>
+      </a>
       <div class="card-text">
-        <h3>Square Double-sided LED Makeup Mirror</h3>
-        <p>Hot selling ins style mini mirror, portable foldable hand mirror with LED light.</p>
+        <h3 class="card-name">
+          <a href="makeup-mirror.html">Square Double-sided LED Makeup Mirror</a>
+        </h3>
+        <p class="card-desc">Hot selling ins style mini mirror, portable foldable hand mirror with LED light.</p>
+        <a class="learn" href="makeup-mirror.html">View Product Details ↗</a>
       </div>
-    </a>
+    </div>
 
     <!-- 第2款：Smart LED Mirror -->
-    <a href="smart-led-mirror.html" class="card">
-      <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Olavi%20Beauty-LED%20Makeup%20mirror-01.jpg" alt="Smart LED Mirror">
+    <div class="product-card">
+      <a href="smart-led-mirror.html">
+        <div class="card-img-wrap">
+          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Olavi%20Beauty-LED%20Makeup%20mirror-01.jpg" alt="Smart LED Mirror">
+        </div>
+      </a>
       <div class="card-text">
-        <h3>Smart LED Mirror</h3>
-        <p>Smart touch control LED makeup mirror, multi brightness adjustable, desktop cosmetic mirror.</p>
+        <h3 class="card-name">
+          <a href="smart-led-mirror.html">Smart LED Mirror</a>
+        </h3>
+        <p class="card-desc">Smart touch control LED makeup mirror, multi brightness adjustable, desktop cosmetic mirror.</p>
+        <a class="learn" href="smart-led-mirror.html">View Product Details ↗</a>
       </div>
-    </a>
+    </div>
 
     <!-- 第3款：Tri-fold Retractable Hanging LED Barber Mirror -->
-    <a href="tri-fold-barber-mirror.html" class="card">
-      <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type02/Olavi%20Beauty-Makeup%20mirror-type2-010.jpeg" alt="Tri-fold Retractable Hanging LED Barber Mirror">
+    <div class="product-card">
+      <a href="tri-fold-barber-mirror.html">
+        <div class="card-img-wrap">
+          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type02/Olavi%20Beauty-Makeup%20mirror-type2-010.jpeg" alt="Tri-fold Retractable Hanging LED Barber Mirror">
+        </div>
+      </a>
       <div class="card-text">
-        <h3>Tri-fold Retractable Hanging LED Barber Mirror</h3>
-        <p>Retractable hanging three-sided folding mirror with LED light, simple European and American style.</p>
+        <h3 class="card-name">
+          <a href="tri-fold-barber-mirror.html">Tri-fold Retractable Hanging LED Barber Mirror</a>
+        </h3>
+        <p class="card-desc">Retractable hanging three-sided folding mirror with LED light, simple European and American style.</p>
+        <a class="learn" href="tri-fold-barber-mirror.html">View Product Details ↗</a>
       </div>
-    </a>
+    </div>
 
     <!-- 第4款：6 Inch 10/20/30X Rechargeable LED Stand Mirror -->
-    <a href="6inch-magnifying-led-mirror.html" class="card">
-      <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type03/Olavi%20Beauty-Makeup%20mirror-type3-01.jpeg" alt="6 Inch 10/20/30X Rechargeable LED Stand Mirror">
+    <div class="product-card">
+      <a href="6inch-magnifying-led-mirror.html">
+        <div class="card-img-wrap">
+          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type03/Olavi%20Beauty-Makeup%20mirror-type3-01.jpeg" alt="6 Inch 10/20/30X Rechargeable LED Stand Mirror">
+        </div>
+      </a>
       <div class="card-text">
-        <h3>6 Inch 10/20/30X Rechargeable LED Stand Mirror</h3>
-        <p>6 inch 10X/20X/30X magnifying rechargeable LED mirror, 360° rotatable bracket with fill light.</p>
+        <h3 class="card-name">
+          <a href="6inch-magnifying-led-mirror.html">6 Inch 10/20/30X Rechargeable LED Stand Mirror</a>
+        </h3>
+        <p class="card-desc">6 inch 10X/20X/30X magnifying rechargeable LED mirror, 360° rotatable bracket with fill light.</p>
+        <a class="learn" href="6inch-magnifying-led-mirror.html">View Product Details ↗</a>
       </div>
-    </a>
+    </div>
 
     <!-- 第5款：7 Inch Dual-Sided LED Desktop Mirror -->
-    <a href="7inch-dual-sided-led-mirror.html" class="card">
-      <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type04/Olavi%20Beauty-Makeup%20mirror-type4-01.jpeg" alt="7 Inch Dual-Sided LED Desktop Mirror">
+    <div class="product-card">
+      <a href="7inch-dual-sided-led-mirror.html">
+        <div class="card-img-wrap">
+          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type04/Olavi%20Beauty-Makeup%20mirror-type4-01.jpeg" alt="7 Inch Dual-Sided LED Desktop Mirror">
+        </div>
+      </a>
       <div class="card-text">
-        <h3>7 Inch Dual-Sided LED Desktop Mirror</h3>
-        <p>7 inch dual-sided desktop makeup mirror, double side design with LED fill light.</p>
+        <h3 class="card-name">
+          <a href="7inch-dual-sided-led-mirror.html">7 Inch Dual-Sided LED Desktop Mirror</a>
+        </h3>
+        <p class="card-desc">7 inch dual-sided desktop makeup mirror, double side design with LED fill light.</p>
+        <a class="learn" href="7inch-dual-sided-led-mirror.html">View Product Details ↗</a>
       </div>
-    </a>
+    </div>
 
     <!-- 第6款：Pocket Mini Handheld Illuminated Mirror -->
-    <a href="pocket-mini-handheld-led-mirror.html" class="card">
-      <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type05/OlaviBeauty-Makeupmirror-type5-03.jpg" alt="Pocket Mini Handheld Illuminated Mirror">
+    <div class="product-card">
+      <a href="pocket-mini-handheld-led-mirror.html">
+        <div class="card-img-wrap">
+          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type05/OlaviBeauty-Makeupmirror-type5-03.jpg" alt="Pocket Mini Handheld Illuminated Mirror">
+        </div>
+      </a>
       <div class="card-text">
-        <h3>Pocket Mini Handheld Illuminated Mirror</h3>
-        <p>LED pocket mini handheld makeup mirror, flip switch, 8 LED beads, 2X magnifying folding design.</p>
+        <h3 class="card-name">
+          <a href="pocket-mini-handheld-led-mirror.html">Pocket Mini Handheld Illuminated Mirror</a>
+        </h3>
+        <p class="card-desc">LED pocket mini handheld makeup mirror, flip switch, 8 LED beads, 2X magnifying folding design.</p>
+        <a class="learn" href="pocket-mini-handheld-led-mirror.html">View Product Details ↗</a>
       </div>
-    </a>
+    </div>
 
     <!-- 第7款：LED Handheld Dual-Sided Folding Mirror -->
-    <a href="led-handheld-dual-fold-mirror.html" class="card">
-      <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type06/Olavi%20Beauty-Makeup%20mirror-type6-04.jpeg" alt="LED Handheld Dual-Sided Folding Mirror">
+    <div class="product-card">
+      <a href="led-handheld-dual-fold-mirror.html">
+        <div class="card-img-wrap">
+          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type06/Olavi%20Beauty-Makeup%20mirror-type6-04.jpeg" alt="LED Handheld Dual-Sided Folding Mirror">
+        </div>
+      </a>
       <div class="card-text">
-        <h3>LED Handheld Dual-Sided Folding Mirror</h3>
-        <p>LED handheld makeup mirror, portable folding two-sided magnifying cosmetic mirror with fill light.</p>
+        <h3 class="card-name">
+          <a href="led-handheld-dual-fold-mirror.html">LED Handheld Dual-Sided Folding Mirror</a>
+        </h3>
+        <p class="card-desc">LED handheld makeup mirror, portable folding two-sided magnifying cosmetic mirror with fill light.</p>
+        <a class="learn" href="led-handheld-dual-fold-mirror.html">View Product Details ↗</a>
       </div>
-    </a>
+    </div>
 
     <!-- 第8款：5/10/20/30X Suction Magnifying Makeup Mirror -->
-    <a href="suction-magnifying-mirror-5-10-20-30x.html" class="card">
-      <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type07/Olavi%20Beauty-Makeup%20mirror-type7-01.jpg" alt="5/10/20/30X Suction Magnifying Makeup Mirror">
+    <div class="product-card">
+      <a href="suction-magnifying-mirror-5-10-20-30x.html">
+        <div class="card-img-wrap">
+          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type07/Olavi%20Beauty-Makeup%20mirror-type7-01.jpg" alt="5/10/20/30X Suction Magnifying Makeup Mirror">
+        </div>
+      </a>
       <div class="card-text">
-        <h3>5/10/20/30X Suction Magnifying Makeup Mirror</h3>
-        <p>Multi-power suction cup magnifying mirror, 5X,10X,20X,30X for precise makeup and eyebrow care.</p>
+        <h3 class="card-name">
+          <a href="suction-magnifying-mirror-5-10-20-30x.html">5/10/20/30X Suction Magnifying Makeup Mirror</a>
+        </h3>
+        <p class="card-desc">Multi-power suction cup magnifying mirror, 5X,10X,20X,30X for precise makeup and eyebrow care.</p>
+        <a class="learn" href="suction-magnifying-mirror-5-10-20-30x.html">View Product Details ↗</a>
       </div>
-    </a>
+    </div>
 
     <!-- 第9款：Telescopic Hanging Tri-Fold Bathroom Mirror -->
-    <a href="telescopic-hanging-tri-fold-bathroom-mirror.html" class="card">
-      <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type08/Olavi%20Beauty-Makeup%20mirror-type8-08.jpeg" alt="Telescopic Hanging Tri-Fold Bathroom Mirror">
+    <div class="product-card">
+      <a href="telescopic-hanging-tri-fold-bathroom-mirror.html">
+        <div class="card-img-wrap">
+          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type08/Olavi%20Beauty-Makeup%20mirror-type8-08.jpeg" alt="Telescopic Hanging Tri-Fold Bathroom Mirror">
+        </div>
+      </a>
       <div class="card-text">
-        <h3>Telescopic Hanging Tri-Fold Bathroom Mirror</h3>
-        <p>Telescopic hanging three-fold mirror, multi-sided HD LED makeup mirror for home bathroom.</p>
+        <h3 class="card-name">
+          <a href="telescopic-hanging-tri-fold-bathroom-mirror.html">Telescopic Hanging Tri-Fold Bathroom Mirror</a>
+        </h3>
+        <p class="card-desc">Telescopic hanging three-fold mirror, multi-sided HD LED makeup mirror for home bathroom.</p>
+        <a class="learn" href="telescopic-hanging-tri-fold-bathroom-mirror.html">View Product Details ↗</a>
       </div>
-    </a>
+    </div>
 
     <!-- 第10款：Large Three Color Light Desktop Foldable Mirror -->
-    <a href="large-three-color-light-foldable-table-mirror.html" class="card">
-      <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type09/Olavi%20Beauty-Makeup%20mirror-type9-03.jpeg" alt="Large Three Color Light Desktop Foldable Mirror">
+    <div class="product-card">
+      <a href="large-three-color-light-foldable-table-mirror.html">
+        <div class="card-img-wrap">
+          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type09/Olavi%20Beauty-Makeup%20mirror-type9-03.jpeg" alt="Large Three Color Light Desktop Foldable Mirror">
+        </div>
+      </a>
       <div class="card-text">
-        <h3>Large Three Color Light Desktop Foldable Mirror</h3>
-        <p>Portable large LED makeup mirror with three lighting modes, desktop flip vanity mirror with fill light.</p>
+        <h3 class="card-name">
+          <a href="large-three-color-light-foldable-table-mirror.html">Large Three Color Light Desktop Foldable Mirror</a>
+        </h3>
+        <p class="card-desc">Portable large LED makeup mirror with three lighting modes, desktop flip vanity mirror with fill light.</p>
+        <a class="learn" href="large-three-color-light-foldable-table-mirror.html">View Product Details ↗</a>
       </div>
-    </a>
+    </div>
 
     <!-- 第11款：Car Sun Visor LED Mirror -->
-    <a href="car-sun-visor-led-mirror.html" class="card">
-      <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type10/Olavi%20Beauty-Makeup%20mirror-type10-01.jpeg" alt="Car Sun Visor LED Mirror">
+    <div class="product-card">
+      <a href="car-sun-visor-led-mirror.html">
+        <div class="card-img-wrap">
+          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type10/Olavi%20Beauty-Makeup%20mirror-type10-01.jpeg" alt="Car Sun Visor LED Mirror">
+        </div>
+      </a>
       <div class="card-text">
-        <h3>Car Sun Visor LED Mirror</h3>
-        <p>Portable rechargeable smart LED makeup mirror for car sun visor, decorative auto vanity mirror.</p>
+        <h3 class="card-name">
+          <a href="car-sun-visor-led-mirror.html">Car Sun Visor LED Mirror</a>
+        </h3>
+        <p class="card-desc">Portable rechargeable smart LED makeup mirror for car sun visor, decorative auto vanity mirror.</p>
+        <a class="learn" href="car-sun-visor-led-mirror.html">View Product Details ↗</a>
       </div>
-    </a>
+    </div>
 
     <!-- 第12款：LED Compact Round Portable Makeup Mirror -->
-    <a href="led-compact-round-mirror.html" class="card">
-      <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type11/Olavi%20Beauty-Makeup%20mirror-type11-07.jpeg" alt="LED Compact Round Portable Makeup Mirror">
+    <div class="product-card">
+      <a href="led-compact-round-mirror.html">
+        <div class="card-img-wrap">
+          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type11/Olavi%20Beauty-Makeup%20mirror-type11-07.jpeg" alt="LED Compact Round Portable Makeup Mirror">
+        </div>
+      </a>
       <div class="card-text">
-        <h3>LED Compact Round Portable Makeup Mirror</h3>
-        <p>Round powder case style LED makeup mirror with fill light, portable compact mirror, dual purpose as pill box.</p>
+        <h3 class="card-name">
+          <a href="led-compact-round-mirror.html">LED Compact Round Portable Makeup Mirror</a>
+        </h3>
+        <p class="card-desc">Round powder case style LED makeup mirror with fill light, portable compact mirror, dual purpose as pill box.</p>
+        <a class="learn" href="led-compact-round-mirror.html">View Product Details ↗</a>
       </div>
-    </a>
+    </div>
 
     <!-- 第13款：Double-sided LED Handheld Tabletop Wall Mount 3-in-1 Mirror -->
-    <a href="double-sided-led-3way-mirror.html" class="card">
-      <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type12/Olavi%20Beauty-Makeup%20mirror-type12-03.jpeg" alt="Double-sided LED Handheld Tabletop Wall Mount 3-in-1 Mirror">
+    <div class="product-card">
+      <a href="double-sided-led-3way-mirror.html">
+        <div class="card-img-wrap">
+          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type12/Olavi%20Beauty-Makeup%20mirror-type12-03.jpeg" alt="Double-sided LED Handheld Tabletop Wall Mount 3-in-1 Mirror">
+        </div>
+      </a>
       <div class="card-text">
-        <h3>Double-sided LED 3-Way Mirror</h3>
-        <p>Double sided LED makeup mirror, multi-use for handheld, desktop and wall mounting, magnifying vanity mirror.</p>
+        <h3 class="card-name">
+          <a href="double-sided-led-3way-mirror.html">Double-sided LED 3-Way Mirror</a>
+        </h3>
+        <p class="card-desc">Double sided LED makeup mirror, multi-use for handheld, desktop and wall mounting, magnifying vanity mirror.</p>
+        <a class="learn" href="double-sided-led-3way-mirror.html">View Product Details ↗</a>
       </div>
-    </a>
+    </div>
 
     <!-- 第14款：No Drill Wall Mount 360 Foldable 10X Magnifying Touch-up Mirror -->
-    <a href="no-drill-wall-360fold-10x-mirror.html" class="card">
-      <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type13/Olavi%20Beauty-Makeup%20mirror-type13-04.jpeg" alt="No Drill Wall Mount 360 Foldable 10X Magnifying Touch-up Mirror">
+    <div class="product-card">
+      <a href="no-drill-wall-360fold-10x-mirror.html">
+        <div class="card-img-wrap">
+          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type13/Olavi%20Beauty-Makeup%20mirror-type13-04.jpeg" alt="No Drill Wall Mount 360 Foldable 10X Magnifying Touch-up Mirror">
+        </div>
+      </a>
       <div class="card-text">
-        <h3>No Drill Wall 360° Fold 10X Mirror</h3>
-        <p>Led no-drill wall makeup mirror, home 360 degree folding mirror, 10X magnifying touch-up mirror with light.</p>
+        <h3 class="card-name">
+          <a href="no-drill-wall-360fold-10x-mirror.html">No Drill Wall 360° Fold 10X Mirror</a>
+        </h3>
+        <p class="card-desc">Led no-drill wall makeup mirror, home 360 degree folding mirror, 10X magnifying touch-up mirror with light.</p>
+        <a class="learn" href="no-drill-wall-360fold-10x-mirror.html">View Product Details ↗</a>
       </div>
-    </a>
+    </div>
   </div>
-</div>
+</main>
+<footer class="footer">
+  <div>OLAVI BEAUTY</div>
+  <div>B2B Beauty Products · Wholesale · OEM / ODM Inquiries</div>
+  <div>© 2026 Olavi Beauty</div>
+</footer>
 </body>
 </html>
