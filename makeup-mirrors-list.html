@@ -3,34 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Olavi Beauty LED Makeup Mirrors wholesale, private label available.">
-<title>Makeup Mirrors | Olavi Beauty</title>
+<meta name="description" content="Olavi Beauty supplies cotton swabs, cosmetics and makeup mirrors to global B2B buyers. Contact us for wholesale and private label inquiries.">
+<title>Cotton Swabs & Cotton Pads | Olavi Beauty</title>
 <style>
 :root{--ink:#252321;--muted:#716b65;--cream:#faf7f2;--pink:#ead7d0;--accent:#9a6356;--line:#e8e0d9}
 *{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  color:var(--ink);
-  line-height:1.6
-}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.6}
 a{color:inherit;text-decoration:none}
-.top{
-  background:#292522;
-  color:#fff;
-  text-align:center;
-  padding:9px;
-  font-size:12px;
-  letter-spacing:1px;
-}
-.nav{
-  height:76px;
-  padding:0 7%;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px
-}
+.top{background:#292522;color:#fff;text-align:center;padding:9px;font-size:12px;letter-spacing:1px}
+.nav{height:76px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:20px}
 .logo{
   display:flex;
   align-items:center;
@@ -43,11 +24,9 @@ a{color:inherit;text-decoration:none}
   max-width:180px;
   object-fit:contain;
 }
-.links{
-  display:flex;
-  gap:25px;
-  font-size:13px;
-  align-items:center;
+.links{display:flex;gap:25px;font-size:13px}
+.links {
+  align-items: center;
 }
 .links > a,
 .dropdown-toggle {
@@ -88,77 +67,65 @@ a{color:inherit;text-decoration:none}
 .nav-dropdown:focus-within .dropdown-menu {
   display: block;
 }
-.btn{
-  display:inline-block;
-  background:var(--ink);
-  color:white;
-  padding:13px 21px;
-  font-size:12px;
-  letter-spacing:1px;
-  border:1px solid var(--ink)
-}
-main{
-  max-width:1240px;
-  margin:0 auto;
-  padding:50px 7%;
-}
+.btn{display:inline-block;background:var(--ink);color:white;padding:13px 21px;font-size:12px;letter-spacing:1px;border:1px solid var(--ink)}
+/* 面包屑 */
 .breadcrumb{
+  padding:26px 7% 12px;
   font-size:13px;
   color:var(--muted);
-  margin-bottom:24px;
 }
-.breadcrumb a{
-  color:var(--ink);
+.breadcrumb a:hover{
+  color:var(--accent);
 }
-.page-title{
-  font-family:Georgia,serif;
-  font-size:37px;
-  font-weight:normal;
-  margin-bottom:12px;
+/* 页面标题区域，和index保持字体体系 */
+.page-title-area{
+  padding:0 7% 34px;
 }
-.page-sub{
-  font-size:16px;
+.page-title-area h1{
+  font-family: Georgia, serif;
+  font-size: clamp(32px, 3.5vw, 48px);
+  line-height: 1.18;
+  font-weight: normal;
+  margin: 0 0 20px;
+  overflow-wrap: break-word;
+}
+.page-title-area p{
   color:var(--muted);
-  margin-bottom:32px;
-  line-height:1.7;
+  max-width:490px;
 }
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+/* 产品网格 */
+main{
+  padding:0 7% 76px;
+}
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
   gap:23px;
 }
 .product-card{
-  border:1px solid var(--line);
-  overflow:hidden;
-  transition:0.25s ease;
+  background:#fff;
+  transition:0.2s ease;
 }
-.product-card:hover{
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-}
-.card-img-wrap{
+.product-card img{
+  display:block;
   width:100%;
   aspect-ratio:1 / 1;
-  background:var(--cream);
-}
-.card-img-wrap img{
-  width:100%;
   height:auto;
   object-fit:contain;
-  display:block;
+  background:var(--cream);
 }
-.card-text{
-  padding:16px;
-}
-.card-name{
+.product-card h3{
   font-family:Georgia,serif;
-  font-size:22px;
   font-weight:normal;
-  margin:0 0 6px;
+  font-size:22px;
+  margin:14px 0 4px;
+  text-align:center;
 }
-.card-desc{
+.product-card p{
   font-size:13px;
   color:var(--muted);
   margin:0 0 12px;
+  text-align:center;
 }
 .learn{
   font-size:11px;
@@ -167,17 +134,16 @@ main{
   border-bottom:1px solid var(--accent);
   padding-bottom:4px;
   display:inline-block;
+  margin:0 auto;
 }
-.footer{
-  background:#292522;
-  color:white;
-  padding:35px 8%;
-  margin-top:60px;
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  font-size:12px
+.learn-wrap{
+  text-align:center;
 }
+footer{
+  background:#292522;color:white;padding:35px 8%;display:flex;justify-content:space-between;gap:20px;font-size:12px
+}
+.note{font-size:11px;color:var(--muted);margin-top:30px}
+
 @media(max-width:700px){
   .nav{
     padding:12px 5%;
@@ -192,6 +158,9 @@ main{
     font-size: 12px;
     align-items: center;
   }
+  .nav-dropdown {
+    position: relative;
+  }
   .dropdown-menu {
     left: 0;
     min-width: 190px;
@@ -202,18 +171,27 @@ main{
   .nav .btn{
     padding:9px 12px;
   }
-  .page-title{
+  .breadcrumb{
+    padding:18px 5% 8px;
+    font-size:12px;
+  }
+  .page-title-area{
+    padding:0 5% 24px;
+  }
+  .page-title-area h1{
     font-size:31px;
   }
-  .product-grid {
+  main{
+    padding:0 5% 52px;
+  }
+  .product-grid{
     grid-template-columns:repeat(2,1fr);
+    gap:20px;
   }
-}
-@media(max-width:480px){
-  .product-grid {
-    grid-template-columns:1fr;
+  .product-card h3{
+    font-size:19px;
   }
-  .footer{
+  footer{
     flex-direction:column;
   }
 }
@@ -235,7 +213,7 @@ main{
   <div class="nav-dropdown">
     <a href="#products" class="dropdown-toggle">Products</a>
     <div class="dropdown-menu">
-      <a href="cotton-swabs.html">Wooden Cotton Swabs</a>
+      <a href="cotton-swabs.html">Cotton Swabs & Cotton Pads</a>
       <a href="lipstick-lipgloss-list.html">Lipstick &amp; Lip Gloss</a>
       <a href="makeup-mirrors-list.html">Makeup Mirrors</a>
     </div>
@@ -255,239 +233,133 @@ main{
 
 <a class="btn" href="#contact">CONTACT US</a>
 </header>
+
+<div class="breadcrumb">
+  <a href="index.html">Home</a> /
+  <span>Cotton Swabs & Cotton Pads</span>
+</div>
+
+<div class="page-title-area">
+  <h1>Cotton Swabs & Cotton Pads</h1>
+  <p>Multiple styles of wooden & bamboo & plastic handle cotton swabs, pure degreased cotton balls and disposable wet compress pads for eyelash extension, microblading, makeup removal and disinfection. Wholesale & OEM available.</p>
+</div>
+
 <main>
-  <div class="breadcrumb">
-    <a href="index.html">Home</a> / <span>Makeup Mirrors</span>
-  </div>
-  <h1 class="page-title">Makeup Mirrors</h1>
-  <!-- 新增B2B描述行，和棉签页面样式对齐 -->
-  <p class="page-sub">Multi-style LED makeup mirrors, magnifying vanity mirrors, foldable, wall-mounted, portable pocket mirrors. OEM & private label available for beauty retailers, distributors. Wholesale inquiry welcome.</p>
   <div class="product-grid">
-    <!-- 第1款：Square Double-sided LED Makeup Mirror -->
-    <div class="product-card">
-      <a href="makeup-mirror.html">
-        <div class="card-img-wrap">
-          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type01/Olavi%20Beauty-Makeup%20mirror-type1-01.jpeg" alt="Square Double-sided LED Makeup Mirror">
+      <!-- SKU1 圆头款 -->
+      <div class="product-card">
+        <a href="regular-cotton-swabs.html">
+          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-Cotton%20swab/Olavi%20Beauty-Cotton%20swab-01.jpg" alt="Regular Round Tip Wooden Cotton Swabs">
+        </a>
+        <h3>Regular Round Tip Wooden Cotton Swabs</h3>
+        <p>Wooden cotton swabs with pure cotton tips for personal care and beauty applications.</p>
+        <div class="learn-wrap">
+          <a class="learn" href="regular-cotton-swabs.html">View Product Details ↗</a>
         </div>
-      </a>
-      <div class="card-text">
-        <h3 class="card-name">
-          <a href="makeup-mirror.html">Square Double-sided LED Makeup Mirror</a>
-        </h3>
-        <p class="card-desc">Hot selling ins style mini mirror, portable foldable hand mirror with LED light.</p>
-        <a class="learn" href="makeup-mirror.html">View Product Details ↗</a>
       </div>
-    </div>
-
-    <!-- 第2款：Smart LED Mirror -->
-    <div class="product-card">
-      <a href="smart-led-mirror.html">
-        <div class="card-img-wrap">
-          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Olavi%20Beauty-LED%20Makeup%20mirror-01.jpg" alt="Smart LED Mirror">
+      <!-- SKU2 细尖款 -->
+      <div class="product-card">
+        <a href="wooden-cotton-swabs.html">
+          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-Cotton%20swab/type-01/Olavi%20Beauty-Cotton%20swab-type1-04.jpg" alt="Fine Tip Wooden Cotton Swabs">
+        </a>
+        <h3>Fine Tip Wooden Cotton Swabs</h3>
+        <p>Wooden cotton swabs with pure cotton tips for personal care and beauty applications.</p>
+        <div class="learn-wrap">
+          <a class="learn" href="wooden-cotton-swabs.html">View Product Details ↗</a>
         </div>
-      </a>
-      <div class="card-text">
-        <h3 class="card-name">
-          <a href="smart-led-mirror.html">Smart LED Mirror</a>
-        </h3>
-        <p class="card-desc">Smart touch control LED makeup mirror, multi brightness adjustable, desktop cosmetic mirror.</p>
-        <a class="learn" href="smart-led-mirror.html">View Product Details ↗</a>
       </div>
-    </div>
-
-    <!-- 第3款：Tri-fold Retractable Hanging LED Barber Mirror -->
-    <div class="product-card">
-      <a href="tri-fold-barber-mirror.html">
-        <div class="card-img-wrap">
-          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type02/Olavi%20Beauty-Makeup%20mirror-type2-010.jpeg" alt="Tri-fold Retractable Hanging LED Barber Mirror">
+      <!-- SKU3 祛斑精华棉签 -->
+      <div class="product-card">
+        <a href="spot-removal-cotton-swabs.html">
+          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-Cotton%20swab/type-02/Olavi%20Beauty-Cotton%20swab-type2-01.jpg" alt="Spot Removal Essence Cotton Swabs">
+        </a>
+        <h3>Spot Removal Essence Cotton Swabs</h3>
+        <p>Wooden cotton swabs with pure cotton tips for personal care and beauty applications.</p>
+        <div class="learn-wrap">
+          <a class="learn" href="spot-removal-cotton-swabs.html">View Product Details ↗</a>
         </div>
-      </a>
-      <div class="card-text">
-        <h3 class="card-name">
-          <a href="tri-fold-barber-mirror.html">Tri-fold Retractable Hanging LED Barber Mirror</a>
-        </h3>
-        <p class="card-desc">Retractable hanging three-sided folding mirror with LED light, simple European and American style.</p>
-        <a class="learn" href="tri-fold-barber-mirror.html">View Product Details ↗</a>
       </div>
-    </div>
-
-    <!-- 第4款：6 Inch 10/20/30X Rechargeable LED Stand Mirror -->
-    <div class="product-card">
-      <a href="6inch-magnifying-led-mirror.html">
-        <div class="card-img-wrap">
-          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type03/Olavi%20Beauty-Makeup%20mirror-type3-01.jpeg" alt="6 Inch 10/20/30X Rechargeable LED Stand Mirror">
+      <!-- SKU4 双头卫生棉签 -->
+      <div class="product-card">
+        <a href="double-tip-cotton-swabs.html">
+          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-Cotton%20swab/type-03/Olavi%20Beauty-Cotton%20swab-type3-01.jpg" alt="Double Tip Sanitary Cotton Swabs">
+        </a>
+        <h3>Double Tip Sanitary Cotton Swabs</h3>
+        <p>Wooden cotton swabs with pure cotton tips for personal care and beauty applications.</p>
+        <div class="learn-wrap">
+          <a class="learn" href="double-tip-cotton-swabs.html">View Product Details ↗</a>
         </div>
-      </a>
-      <div class="card-text">
-        <h3 class="card-name">
-          <a href="6inch-magnifying-led-mirror.html">6 Inch 10/20/30X Rechargeable LED Stand Mirror</a>
-        </h3>
-        <p class="card-desc">6 inch 10X/20X/30X magnifying rechargeable LED mirror, 360° rotatable bracket with fill light.</p>
-        <a class="learn" href="6inch-magnifying-led-mirror.html">View Product Details ↗</a>
       </div>
-    </div>
-
-    <!-- 第5款：7 Inch Dual-Sided LED Desktop Mirror -->
-    <div class="product-card">
-      <a href="7inch-dual-sided-led-mirror.html">
-        <div class="card-img-wrap">
-          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type04/Olavi%20Beauty-Makeup%20mirror-type4-01.jpeg" alt="7 Inch Dual-Sided LED Desktop Mirror">
+      <!-- SKU5 多用途棉签 -->
+      <div class="product-card">
+        <a href="multi-purpose-cotton-swabs.html">
+          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-Cotton%20swab/type-04/Olavi%20Beauty-Cotton%20swab-type4-01.jpg" alt="Multi-purpose Cotton Swabs">
+        </a>
+        <h3>Multi-purpose Cotton Swabs</h3>
+        <p>Wooden cotton swabs with pure cotton tips for personal care and beauty applications.</p>
+        <div class="learn-wrap">
+          <a class="learn" href="multi-purpose-cotton-swabs.html">View Product Details ↗</a>
         </div>
-      </a>
-      <div class="card-text">
-        <h3 class="card-name">
-          <a href="7inch-dual-sided-led-mirror.html">7 Inch Dual-Sided LED Desktop Mirror</a>
-        </h3>
-        <p class="card-desc">7 inch dual-sided desktop makeup mirror, double side design with LED fill light.</p>
-        <a class="learn" href="7inch-dual-sided-led-mirror.html">View Product Details ↗</a>
       </div>
-    </div>
-
-    <!-- 第6款：Pocket Mini Handheld Illuminated Mirror -->
-    <div class="product-card">
-      <a href="pocket-mini-handheld-led-mirror.html">
-        <div class="card-img-wrap">
-          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type05/OlaviBeauty-Makeupmirror-type5-03.jpg" alt="Pocket Mini Handheld Illuminated Mirror">
+      <!-- SKU6 散装竹双头棉签 -->
+      <div class="product-card">
+        <a href="bulk-bamboo-cotton-swabs.html">
+          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-Cotton%20swab/type-05/Olavi%20Beauty-Cotton%20swab-type5-01.jpg" alt="Bulk Bamboo Double-headed Cotton Swabs">
+        </a>
+        <h3>Bulk Bamboo Double-headed Cotton Swabs</h3>
+        <p>Wooden cotton swabs with pure cotton tips for personal care and beauty applications.</p>
+        <div class="learn-wrap">
+          <a class="learn" href="bulk-bamboo-cotton-swabs.html">View Product Details ↗</a>
         </div>
-      </a>
-      <div class="card-text">
-        <h3 class="card-name">
-          <a href="pocket-mini-handheld-led-mirror.html">Pocket Mini Handheld Illuminated Mirror</a>
-        </h3>
-        <p class="card-desc">LED pocket mini handheld makeup mirror, flip switch, 8 LED beads, 2X magnifying folding design.</p>
-        <a class="learn" href="pocket-mini-handheld-led-mirror.html">View Product Details ↗</a>
       </div>
-    </div>
-
-    <!-- 第7款：LED Handheld Dual-Sided Folding Mirror -->
-    <div class="product-card">
-      <a href="led-handheld-dual-fold-mirror.html">
-        <div class="card-img-wrap">
-          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type06/Olavi%20Beauty-Makeup%20mirror-type6-04.jpeg" alt="LED Handheld Dual-Sided Folding Mirror">
+      <!-- SKU7 修正眼线塑料柄棉签 -->
+      <div class="product-card">
+        <a href="eyeliner-correction-plastic-swabs.html">
+          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-Cotton%20swab/type-08/Olavi%20Beauty-Cotton%20swab-type8-01.jpg" alt="Plastic Handle Eyeliner Correction Cotton Swabs">
+        </a>
+        <h3>Plastic Handle Eyeliner Correction Cotton Swabs</h3>
+        <p>Wooden cotton swabs with pure cotton tips for personal care and beauty applications.</p>
+        <div class="learn-wrap">
+          <a class="learn" href="eyeliner-correction-plastic-swabs.html">View Product Details ↗</a>
         </div>
-      </a>
-      <div class="card-text">
-        <h3 class="card-name">
-          <a href="led-handheld-dual-fold-mirror.html">LED Handheld Dual-Sided Folding Mirror</a>
-        </h3>
-        <p class="card-desc">LED handheld makeup mirror, portable folding two-sided magnifying cosmetic mirror with fill light.</p>
-        <a class="learn" href="led-handheld-dual-fold-mirror.html">View Product Details ↗</a>
       </div>
-    </div>
-
-    <!-- 第8款：5/10/20/30X Suction Magnifying Makeup Mirror -->
-    <div class="product-card">
-      <a href="suction-magnifying-mirror-5-10-20-30x.html">
-        <div class="card-img-wrap">
-          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type07/Olavi%20Beauty-Makeup%20mirror-type7-01.jpg" alt="5/10/20/30X Suction Magnifying Makeup Mirror">
+      <!-- SKU8 纯脱脂棉球 -->
+      <div class="product-card">
+        <a href="pure-absorbent-cotton-balls.html">
+          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-Cotton%20swab/type-07/Olavi%20Beauty-Cotton%20swab-type7-01.jpg" alt="Pure Absorbent Cotton Balls">
+        </a>
+        <h3>Pure Absorbent Cotton Balls</h3>
+        <p>Wooden cotton swabs with pure cotton tips for personal care and beauty applications.</p>
+        <div class="learn-wrap">
+          <a class="learn" href="pure-absorbent-cotton-balls.html">View Product Details ↗</a>
         </div>
-      </a>
-      <div class="card-text">
-        <h3 class="card-name">
-          <a href="suction-magnifying-mirror-5-10-20-30x.html">5/10/20/30X Suction Magnifying Makeup Mirror</a>
-        </h3>
-        <p class="card-desc">Multi-power suction cup magnifying mirror, 5X,10X,20X,30X for precise makeup and eyebrow care.</p>
-        <a class="learn" href="suction-magnifying-mirror-5-10-20-30x.html">View Product Details ↗</a>
       </div>
-    </div>
-
-    <!-- 第9款：Telescopic Hanging Tri-Fold Bathroom Mirror -->
-    <div class="product-card">
-      <a href="telescopic-hanging-tri-fold-bathroom-mirror.html">
-        <div class="card-img-wrap">
-          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type08/Olavi%20Beauty-Makeup%20mirror-type8-08.jpeg" alt="Telescopic Hanging Tri-Fold Bathroom Mirror">
+      <!-- SKU9 卸妆湿敷巾 -->
+      <div class="product-card">
+        <a href="wet-compress-makeup-remover-pads.html">
+          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-Cotton%20swab/type-06/Olavi%20Beauty-Cotton%20swab-type6-01.jpg" alt="Wet Compress & Makeup Remover Pads">
+        </a>
+        <h3>Wet Compress & Makeup Remover Pads</h3>
+        <p>Wooden cotton swabs with pure cotton tips for personal care and beauty applications.</p>
+        <div class="learn-wrap">
+          <a class="learn" href="wet-compress-makeup-remover-pads.html">View Product Details ↗</a>
         </div>
-      </a>
-      <div class="card-text">
-        <h3 class="card-name">
-          <a href="telescopic-hanging-tri-fold-bathroom-mirror.html">Telescopic Hanging Tri-Fold Bathroom Mirror</a>
-        </h3>
-        <p class="card-desc">Telescopic hanging three-fold mirror, multi-sided HD LED makeup mirror for home bathroom.</p>
-        <a class="learn" href="telescopic-hanging-tri-fold-bathroom-mirror.html">View Product Details ↗</a>
       </div>
-    </div>
-
-    <!-- 第10款：Large Three Color Light Desktop Foldable Mirror -->
-    <div class="product-card">
-      <a href="large-three-color-light-foldable-table-mirror.html">
-        <div class="card-img-wrap">
-          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type09/Olavi%20Beauty-Makeup%20mirror-type9-03.jpeg" alt="Large Three Color Light Desktop Foldable Mirror">
+      <!-- SKU10 婴儿纸棒双头棉签 -->
+      <div class="product-card">
+        <a href="baby-paper-stick-swabs.html">
+          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-Cotton%20swab/type-09/Olavi%20Beauty-Cotton%20swab-type9-01.jpeg" alt="Baby Paper Stick Double Head Cotton Swabs">
+        </a>
+        <h3>Baby Paper Stick Double Head Cotton Swabs</h3>
+        <p>Wooden cotton swabs with pure cotton tips for personal care and beauty applications.</p>
+        <div class="learn-wrap">
+          <a class="learn" href="baby-paper-stick-swabs.html">View Product Details ↗</a>
         </div>
-      </a>
-      <div class="card-text">
-        <h3 class="card-name">
-          <a href="large-three-color-light-foldable-table-mirror.html">Large Three Color Light Desktop Foldable Mirror</a>
-        </h3>
-        <p class="card-desc">Portable large LED makeup mirror with three lighting modes, desktop flip vanity mirror with fill light.</p>
-        <a class="learn" href="large-three-color-light-foldable-table-mirror.html">View Product Details ↗</a>
       </div>
-    </div>
-
-    <!-- 第11款：Car Sun Visor LED Mirror -->
-    <div class="product-card">
-      <a href="car-sun-visor-led-mirror.html">
-        <div class="card-img-wrap">
-          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type10/Olavi%20Beauty-Makeup%20mirror-type10-01.jpeg" alt="Car Sun Visor LED Mirror">
-        </div>
-      </a>
-      <div class="card-text">
-        <h3 class="card-name">
-          <a href="car-sun-visor-led-mirror.html">Car Sun Visor LED Mirror</a>
-        </h3>
-        <p class="card-desc">Portable rechargeable smart LED makeup mirror for car sun visor, decorative auto vanity mirror.</p>
-        <a class="learn" href="car-sun-visor-led-mirror.html">View Product Details ↗</a>
-      </div>
-    </div>
-
-    <!-- 第12款：LED Compact Round Portable Makeup Mirror -->
-    <div class="product-card">
-      <a href="led-compact-round-mirror.html">
-        <div class="card-img-wrap">
-          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type11/Olavi%20Beauty-Makeup%20mirror-type11-07.jpeg" alt="LED Compact Round Portable Makeup Mirror">
-        </div>
-      </a>
-      <div class="card-text">
-        <h3 class="card-name">
-          <a href="led-compact-round-mirror.html">LED Compact Round Portable Makeup Mirror</a>
-        </h3>
-        <p class="card-desc">Round powder case style LED makeup mirror with fill light, portable compact mirror, dual purpose as pill box.</p>
-        <a class="learn" href="led-compact-round-mirror.html">View Product Details ↗</a>
-      </div>
-    </div>
-
-    <!-- 第13款：Double-sided LED Handheld Tabletop Wall Mount 3-in-1 Mirror -->
-    <div class="product-card">
-      <a href="double-sided-led-3way-mirror.html">
-        <div class="card-img-wrap">
-          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type12/Olavi%20Beauty-Makeup%20mirror-type12-03.jpeg" alt="Double-sided LED Handheld Tabletop Wall Mount 3-in-1 Mirror">
-        </div>
-      </a>
-      <div class="card-text">
-        <h3 class="card-name">
-          <a href="double-sided-led-3way-mirror.html">Double-sided LED 3-Way Mirror</a>
-        </h3>
-        <p class="card-desc">Double sided LED makeup mirror, multi-use for handheld, desktop and wall mounting, magnifying vanity mirror.</p>
-        <a class="learn" href="double-sided-led-3way-mirror.html">View Product Details ↗</a>
-      </div>
-    </div>
-
-    <!-- 第14款：No Drill Wall Mount 360 Foldable 10X Magnifying Touch-up Mirror -->
-    <div class="product-card">
-      <a href="no-drill-wall-360fold-10x-mirror.html">
-        <div class="card-img-wrap">
-          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type13/Olavi%20Beauty-Makeup%20mirror-type13-04.jpeg" alt="No Drill Wall Mount 360 Foldable 10X Magnifying Touch-up Mirror">
-        </div>
-      </a>
-      <div class="card-text">
-        <h3 class="card-name">
-          <a href="no-drill-wall-360fold-10x-mirror.html">No Drill Wall 360° Fold 10X Mirror</a>
-        </h3>
-        <p class="card-desc">Led no-drill wall makeup mirror, home 360 degree folding mirror, 10X magnifying touch-up mirror with light.</p>
-        <a class="learn" href="no-drill-wall-360fold-10x-mirror.html">View Product Details ↗</a>
-      </div>
-    </div>
   </div>
+  <p class="note">Product imagery is illustrative. Final product specifications and availability should be confirmed with our team.</p>
 </main>
+
 <footer class="footer">
   <div>OLAVI BEAUTY</div>
   <div>B2B Beauty Products · Wholesale · OEM / ODM Inquiries</div>
