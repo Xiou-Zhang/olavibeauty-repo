@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lipstick & Lip Gloss | Olavi Beauty</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        .top-notice-bar {
+            background-color: #272522;
+            color: #fff;
+            text-align: center;
+            padding: 14px 20px;
+            font-size: 22px;
+            letter-spacing: 1px;
+        }
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e9e4dd;
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 99;
+        }
+        .logo {
+            height: 70px;
+        }
+        .nav-wrap {
+            display: flex;
+            gap: 42px;
+            align-items: center;
+        }
+        .nav-item {
+            font-size: 24px;
+            color: #272522;
+            text-decoration: none;
+            position: relative;
+            padding: 8px 0;
+        }
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #fff;
+            min-width: 260px;
+            box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+            display: none;
+            flex-direction: column;
+        }
+        .dropdown-menu a {
+            padding: 16px 24px;
+            text-decoration: none;
+            color: #272522;
+            font-size: 22px;
+        }
+        .dropdown-menu a:hover {
+            background-color: #f7f3ee;
+        }
+        .dropdown:hover .dropdown-menu {
+            display: flex;
+        }
+        .contact-btn-header {
+            background-color: #272522;
+            color: white;
+            padding: 18px 36px;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .breadcrumb {
+            font-size: 18px;
+            color: #777;
+            margin-bottom: 32px;
+        }
+        .breadcrumb a {
+            color: #272522;
+            text-decoration: none;
+        }
+        .page-title {
+            font-size: 36px;
+            color: #272522;
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+        .product-card {
+            border: 1px solid #e9e4dd;
+            overflow: hidden;
+            transition: 0.25s ease;
+        }
+        .product-card:hover {
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+        }
+        .product-card a {
+            text-decoration: none;
+        }
+        .card-img-wrap {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            background: #f7f3ee;
+            overflow: hidden;
+        }
+        .card-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .card-text {
+            padding: 20px;
+        }
+        .card-name {
+            font-size: 20px;
+            color: #272522;
+            margin-bottom: 8px;
+        }
+        .card-desc {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+        }
+        footer {
+            margin-top: 80px;
+            background-color: #272522;
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+            font-size: 18px;
+        }
+        @media (max-width:1024px) {
+            .product-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+            .nav-wrap {
+                gap:24px;
+            }
+            .nav-item {
+                font-size:20px;
+            }
+        }
+        @media (max-width:640px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            header {
+                flex-direction: column;
+                gap:20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-notice-bar">B2B BEAUTY SUPPLY · WHOLESALE · PRIVATE LABEL INQUIRIES</div>
+    <header>
+        <a href="index.html">
+            <img src="【这里替换成你logo的R2链接】" alt="Olavi" class="logo">
+        </a>
+        <div class="nav-wrap">
+            <a href="index.html" class="nav-item">Home</a>
+            <div class="dropdown">
+                <a href="#" class="nav-item">Products ▾</a>
+                <div class="dropdown-menu">
+                    <a href="wooden-cotton-swabs-list.html">Wooden Cotton Swabs</a>
+                    <a href="lipstick-lipgloss-list.html">Lipstick & Lip Gloss</a>
+                    <a href="makeup-mirrors-list.html">Makeup Mirrors</a>
+                </div>
+            </div>
+            <a href="about.html" class="nav-item">About Us</a>
+            <div class="dropdown">
+                <a href="#" class="nav-item">Certificates ▾</a>
+                <div class="dropdown-menu">
+                    <a href="#">Cert 1</a>
+                    <a href="#">Cert 2</a>
+                </div>
+            </div>
+            <a href="contact.html" class="nav-item">Contact Us</a>
+        </div>
+        <a href="contact.html" class="contact-btn-header">CONTACT US</a>
+    </header>
+
+    <main>
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> / <span>Lipstick & Lip Gloss</span>
+        </div>
+        <h1 class="page-title">Lipstick & Lip Gloss</h1>
+        <div class="product-grid">
+            <!-- ============ 示例产品卡片，后续上新口红唇釉直接复制整块 ============
+            <div class="product-card">
+                <a href="lipstick-01.html">
+                    <div class="card-img-wrap">
+                        <img src="R2图片链接" alt="产品名称">
+                    </div>
+                    <div class="card-text">
+                        <div class="card-name">产品名称</div>
+                        <div class="card-desc">产品简短描述</div>
+                    </div>
+                </a>
+            </div>
+            -->
+            <!-- 现在是空列表，等你给口红唇釉产品信息，我帮你批量填充卡片 -->
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Olavi Beauty. All rights reserved. B2B Wholesale & Private Label Beauty Supplier</p>
+    </footer>
+</body>
+</html>
