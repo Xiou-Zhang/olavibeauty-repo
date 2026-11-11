@@ -1,125 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cotton Swabs & Cotton Pads | Olavi Beauty</title>
-  <style>
-* {
-  box-sizing: border-box;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cotton Swabs & Cotton Pads | Olavi Beauty</title>
+<style>
+:root{
+  --ink:#252321;
+  --muted:#716b65;
+  --cream:#faf7f2;
+  --accent:#9a6356;
+  --line:#e8e0d9;
+  --dark:#292522;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--ink);
+  line-height:1.7;
+  background:#fff;
+}
+a{color:inherit;text-decoration:none}
+
+/* 顶部公告栏 */
+.top-bar{
+  background:var(--dark);
+  color:#fff;
+  text-align:center;
+  padding:10px 12px;
+  font-size:14px;
+  letter-spacing:0.5px;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #352e2a;
-  background: #fff;
-  line-height: 1.7;
+/* 导航栏 */
+header.nav-wrap{
+  padding:0 7%;
+  height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  border-bottom:1px solid var(--line);
+}
+.logo{
+  flex-shrink:0;
+}
+.logo img{
+  height:52px;
+  width:auto;
+  max-width:180px;
+  object-fit:contain;
+  display:block;
+}
+.nav-links{
+  display:flex;
+  gap:28px;
+  font-size:16px;
+  align-items:center;
+}
+.nav-dropdown{
+  position:relative;
+}
+.dropdown-toggle{
+  display:inline-block;
+  padding:12px 0;
+}
+.dropdown-toggle::after{
+  content:" ▾";
+  font-size:11px;
+}
+.dropdown-menu{
+  display:none;
+  position:absolute;
+  top:100%;
+  left:-12px;
+  min-width:220px;
+  background:#fff;
+  border:1px solid var(--line);
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  z-index:999;
+}
+.dropdown-menu a{
+  display:block;
+  padding:11px 16px;
+  font-size:15px;
+}
+.dropdown-menu a:hover{
+  background:var(--cream);
+  color:var(--accent);
+}
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu{
+  display:block;
+}
+.btn-contact{
+  background:var(--dark);
+  color:#fff;
+  padding:14px 24px;
+  font-size:14px;
+  letter-spacing:1px;
+  white-space:nowrap;
+  border:none;
+}
+.btn-contact:hover{
+  background:#3a3530;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* 面包屑、标题区域 */
+.container{
+  max-width:1500px;
+  width:92%;
+  margin:0 auto;
 }
-
-header {
-  padding: 20px 0;
-  border-bottom: 1px solid #eee6e1;
+.breadcrumb{
+  padding:26px 0 12px;
+  font-size:14px;
+  color:var(--muted);
 }
-
-.container {
-  width: 92%;
-  max-width: 1500px;
-  margin: 0 auto;
-}
-
-.header-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
-
-.logo {
-  display: block;
-  width: 180px;
-  max-width: 48%;
-  height: auto;
-}
-
-.contact-link {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #9a6356;
-  color: #fff;
-  border-radius: 4px;
-  font-size: 13px;
-  letter-spacing: 1px;
-  white-space: nowrap;
-}
-
-.contact-link:hover,
-.cta:hover {
-  background: #805044;
-}
-
-.breadcrumb {
-  padding: 24px 0;
-  color: #806e65;
-  font-size: 14px;
-}
-
-.breadcrumb a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.breadcrumb a:hover {
-  color: #9a6356;
-}
-
-main {
-  width: 100%;
-  max-width: 1500px;
-  margin: 0 auto;
-  padding: 0 4% 55px;
+.breadcrumb a:hover{
+  color:var(--accent);
 }
 .page-title-area{
-  margin-bottom:32px;
+  margin-bottom:34px;
 }
 .page-title-area h1{
+  font-family:Georgia,serif;
+  font-size:clamp(26px,2.8vw,38px);
+  font-weight:normal;
   margin:0 0 10px;
-  font-size: clamp(26px,2.8vw,38px);
-  font-weight:400;
 }
 .page-title-area p{
   color:#70655f;
   font-size:17px;
-  max-width:700px;
-  margin:0;
+  max-width:720px;
 }
 
-/* 大屏：一行4列，产品自动换行 */
+/* 产品网格 */
+main{
+  padding:0 4% 60px;
+  max-width:1500px;
+  margin:0 auto;
+}
 .product-grid{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 28px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:28px;
 }
 .product-card{
-  border:1px solid #eee6e1;
+  border:1px solid var(--line);
   border-radius:8px;
   overflow:hidden;
   background:#fff;
-  transition: 0.2s ease;
+  transition:0.2s ease;
 }
 .product-card:hover{
-  box-shadow: 0 4px 12px #0000000f;
+  box-shadow:0 4px 12px #0000000f;
 }
 .product-card img{
   width:100%;
   aspect-ratio:1/1;
   object-fit:contain;
   background:#f8f4f0;
+  display:block;
 }
 .product-card-text{
   padding:16px;
@@ -131,73 +173,88 @@ main {
   font-weight:400;
 }
 
-footer {
-  padding: 25px 4%;
-  background: #f8f4f0;
-  color: #655e59;
-  font-size: 13px;
-  text-align: center;
+footer{
+  padding:26px 4%;
+  background:#f8f4f0;
+  color:#655e59;
+  font-size:13px;
+  text-align:center;
 }
 
-/* ========== 平板适配 700px ~ 1100px 一行3个 ========== */
-@media (max-width: 1100px) {
+/* 平板适配 */
+@media (max-width:1100px){
   .product-grid{
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns:repeat(3,1fr);
     gap:24px;
   }
+  header.nav-wrap{
+    padding:0 5%;
+  }
+  .nav-links{
+    gap:18px;
+    font-size:15px;
+  }
+  .btn-contact{
+    padding:11px 16px;
+    font-size:12px;
+  }
 }
-
-/* ========== 手机 <700px 一行2个 ========== */
-@media (max-width: 700px) {
-  header {
-    padding: 16px 0;
+/* 手机适配 */
+@media (max-width:700px){
+  header.nav-wrap{
+    height:auto;
+    flex-wrap:wrap;
+    padding:14px 5%;
   }
-
-  .container {
-    width: calc(100% - 32px);
-  }
-
-  .header-inner {
-    gap: 12px;
-  }
-
-  .logo {
-    width: 145px;
-    max-width: 48%;
-  }
-
-  .contact-link {
-    padding: 9px 12px;
-    font-size: 11px;
-  }
-
-  .breadcrumb {
-    padding: 18px 0;
-    font-size: 12px;
-  }
-
-  main {
-    padding: 0 16px 40px;
+  .nav-links{
+    width:100%;
+    gap:14px;
+    flex-wrap:wrap;
+    margin:8px 0;
   }
   .product-grid{
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns:repeat(2,1fr);
     gap:18px;
   }
+  .breadcrumb{
+    padding:18px 0 8px;
+    font-size:12px;
+  }
+  main{
+    padding:0 16px 40px;
+  }
 }
-  </style>
+</style>
 </head>
 <body>
-  
-<header>
-  <div class="container header-inner">
-    <a href="index.html" aria-label="Olavi Beauty home">
-      <img
-        class="logo"
-        src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-%20logo-2.png"
-        alt="Olavi Beauty">
-    </a>
-    <a class="contact-link" href="#inquiry">CONTACT US</a>
-  </div>
+<!-- 顶部公告黑条 -->
+<div class="top-bar">B2B BEAUTY SUPPLY · WHOLESALE · PRIVATE LABEL INQUIRIES</div>
+
+<!-- 导航 -->
+<header class="nav-wrap">
+  <a class="logo" href="index.html">
+    <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-%20logo-2.png" alt="Olavi Beauty">
+  </a>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <div class="nav-dropdown">
+      <span class="dropdown-toggle">Products</span>
+      <div class="dropdown-menu">
+        <a href="cotton-swabs.html">Cotton Swabs & Cotton Pads</a>
+        <a href="makeup-mirrors-list.html">Makeup Mirrors</a>
+        <a href="lipstick-lipgloss-list.html">Lipstick & Lip Gloss</a>
+      </div>
+    </div>
+    <a href="about-us.html">About Us</a>
+    <div class="nav-dropdown">
+      <span class="dropdown-toggle">Certificates</span>
+      <div class="dropdown-menu">
+        <a href="#certificate">Our Certificate</a>
+      </div>
+    </div>
+    <a href="#contact">Contact Us</a>
+  </nav>
+  <a class="btn-contact" href="#contact">CONTACT US</a>
 </header>
 
 <div class="container">
@@ -207,13 +264,12 @@ footer {
   </div>
 </div>
 
-  <main>
-    <div class="page-title-area">
-      <h1>Cotton Swabs & Cotton Pads</h1>
-      <p>Multiple styles of wooden & bamboo & plastic handle cotton swabs, pure degreased cotton balls and disposable wet compress pads for eyelash extension, microblading, makeup removal and disinfection. Wholesale & OEM available.</p>
-    </div>
-
-    <div class="product-grid">
+<main>
+  <div class="page-title-area">
+    <h1>Cotton Swabs & Cotton Pads</h1>
+    <p>Multiple styles of wooden & bamboo & plastic handle cotton swabs, pure degreased cotton balls and disposable wet compress pads for eyelash extension, microblading, makeup removal and disinfection. Wholesale & OEM available.</p>
+  </div>
+  <div class="product-grid">
       <!-- SKU1 圆头款 -->
       <div class="product-card">
         <a href="regular-cotton-swabs.html">
@@ -304,12 +360,11 @@ footer {
           </div>
         </a>
       </div>
-    </div>
-  </main>
+  </div>
+</main>
 
-  <footer>
-    © Olavi Beauty · Wholesale Beauty Supply · OEM / ODM Inquiries
-  </footer>
-
+<footer>
+© Olavi Beauty · Wholesale Beauty Supply · OEM / ODM Inquiries
+</footer>
 </body>
 </html>
