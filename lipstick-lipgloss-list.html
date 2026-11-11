@@ -1,231 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lipstick & Lip Gloss | Olavi Beauty</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        }
-        .top-notice-bar {
-            background-color: #2b2724;
-            color: #fff;
-            text-align: center;
-            padding: 9px 20px;
-            font-size: 13px;
-            letter-spacing: 0.5px;
-        }
-        header {
-            background: #ffffff;
-            border-bottom: 1px solid #eee6e1;
-            padding: 16px 40px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: relative;
-            z-index: 99;
-        }
-        .logo {
-            height: 60px;
-        }
-        .nav-wrap {
-            display: flex;
-            gap: 34px;
-            align-items: center;
-        }
-        .nav-item {
-            font-size: 16px;
-            color: #2b2724;
-            text-decoration: none;
-            position: relative;
-            padding: 6px 0;
-        }
-        .dropdown {
-            position: relative;
-        }
-        .dropdown-menu {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: #fff;
-            min-width: 210px;
-            box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-            display: none;
-            flex-direction: column;
-        }
-        .dropdown-menu a {
-            padding: 12px 18px;
-            text-decoration: none;
-            color: #2b2724;
-            font-size: 15px;
-        }
-        .dropdown-menu a:hover {
-            background-color: #f8f4f0;
-        }
-        .dropdown:hover .dropdown-menu {
-            display: flex;
-        }
-        .contact-btn-header {
-            background-color: #2b2724;
-            color: white;
-            padding: 12px 24px;
-            font-size: 15px;
-            text-decoration: none;
-            letter-spacing: 0.5px;
-        }
-        main {
-            max-width: 1240px;
-            margin: 0 auto;
-            padding: 36px 24px;
-        }
-        .breadcrumb {
-            font-size: 14px;
-            color: #7c6e67;
-            margin-bottom: 26px;
-        }
-        .breadcrumb a {
-            color: #2b2724;
-            text-decoration: none;
-        }
-        .page-title {
-            font-size: 36px;
-            color: #2b2724;
-            margin-bottom: 34px;
-            font-weight: 500;
-        }
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 26px;
-        }
-        .product-card {
-            border: 1px solid #eee6e1;
-            overflow: hidden;
-            transition: 0.25s ease;
-        }
-        .product-card:hover {
-            box-shadow: 0 4px 14px rgba(0,0,0,0.07);
-        }
-        .product-card a {
-            text-decoration: none;
-        }
-        .card-img-wrap {
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            background: #f8f4f0;
-            overflow: hidden;
-        }
-        .card-img-wrap img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .card-text {
-            padding: 16px;
-        }
-        .card-name {
-            font-size: 16px;
-            color: #2b2724;
-            margin-bottom: 5px;
-            font-weight: 500;
-        }
-        .card-desc {
-            font-size: 13px;
-            color: #6e625c;
-            line-height: 1.45;
-        }
-        footer {
-            margin-top: 64px;
-            background-color: #f8f4f0;
-            color: #75665e;
-            padding: 32px 20px;
-            text-align: center;
-            font-size: 13px;
-        }
-        @media (max-width:1024px) {
-            .product-grid {
-                grid-template-columns: repeat(2,1fr);
-            }
-            .nav-wrap {
-                gap:22px;
-            }
-            .nav-item {
-                font-size:15px;
-            }
-            .page-title {
-                font-size: 30px;
-            }
-        }
-        @media (max-width:640px) {
-            .product-grid {
-                grid-template-columns: 1fr;
-            }
-            header {
-                flex-direction: column;
-                gap:14px;
-            }
-            .page-title {
-                font-size: 24px;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Olavi Beauty 2-in-1 Lipstick & Lip Gloss wholesale, private label available.">
+<title>Lipstick & Lip Gloss | Olavi Beauty</title>
+<style>
+:root{--ink:#252321;--muted:#716b65;--cream:#faf7f2;--pink:#ead7d0;--accent:#9a6356;--line:#e8e0d9}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--ink);
+  line-height:1.6
+}
+a{color:inherit;text-decoration:none}
+.top{
+  background:#292522;
+  color:#fff;
+  text-align:center;
+  padding:9px;
+  font-size:12px;
+  letter-spacing:1px;
+}
+.nav{
+  height:76px;
+  padding:0 7%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid var(--line);
+  gap:20px
+}
+.logo{
+  display:flex;
+  align-items:center;
+  flex-shrink:0;
+}
+.logo img{
+  display:block;
+  height:52px;
+  width:auto;
+  max-width:180px;
+  object-fit:contain;
+}
+.links{
+  display:flex;
+  gap:25px;
+  font-size:13px;
+  align-items:center;
+}
+.links > a,
+.dropdown-toggle {
+  display: inline-block;
+  padding: 12px 0;
+  white-space: nowrap;
+}
+.nav-dropdown {
+  position: relative;
+}
+.dropdown-toggle::after {
+  content: " ▾";
+  font-size: 10px;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -12px;
+  min-width: 210px;
+  padding: 8px 0;
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+}
+.dropdown-menu a {
+  display: block;
+  padding: 10px 14px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+.dropdown-menu a:hover {
+  background: var(--cream);
+  color: var(--accent);
+}
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+.btn{
+  display:inline-block;
+  background:var(--ink);
+  color:white;
+  padding:13px 21px;
+  font-size:12px;
+  letter-spacing:1px;
+  border:1px solid var(--ink)
+}
+main{
+  max-width:1240px;
+  margin:0 auto;
+  padding:50px 7%;
+}
+.breadcrumb{
+  font-size:13px;
+  color:var(--muted);
+  margin-bottom:24px;
+}
+.breadcrumb a{
+  color:var(--ink);
+}
+.page-title{
+  font-family:Georgia,serif;
+  font-size:37px;
+  font-weight:normal;
+  margin-bottom:32px;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:23px;
+}
+.product-card{
+  border:1px solid var(--line);
+  overflow:hidden;
+  transition:0.25s ease;
+}
+.product-card:hover{
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.card-img-wrap{
+  width:100%;
+  aspect-ratio:1 / 1;
+  background:var(--cream);
+}
+.card-img-wrap img{
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  display:block;
+}
+.card-text{
+  padding:16px;
+}
+.card-name{
+  font-family:Georgia,serif;
+  font-size:22px;
+  font-weight:normal;
+  margin:0 0 6px;
+}
+.card-desc{
+  font-size:13px;
+  color:var(--muted);
+  margin:0 0 12px;
+}
+.learn{
+  font-size:11px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  border-bottom:1px solid var(--accent);
+  padding-bottom:4px;
+  display:inline-block;
+}
+.footer{
+  background:#292522;
+  color:white;
+  padding:35px 8%;
+  margin-top:60px;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  font-size:12px
+}
+@media(max-width:700px){
+  .nav{
+    padding:12px 5%;
+    height:auto;
+    min-height:70px;
+    flex-wrap:wrap;
+  }
+  .links {
+    width: 100%;
+    gap: 15px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    align-items: center;
+  }
+  .dropdown-menu {
+    left: 0;
+    min-width: 190px;
+  }
+  .dropdown-menu a {
+    padding: 12px 14px;
+  }
+  .nav .btn{
+    padding:9px 12px;
+  }
+  .page-title{
+    font-size:31px;
+  }
+  .product-grid {
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+@media(max-width:480px){
+  .product-grid {
+    grid-template-columns:1fr;
+  }
+  .footer{
+    flex-direction:column;
+  }
+}
+</style>
 </head>
 <body>
-    <div class="top-notice-bar">B2B BEAUTY SUPPLY · WHOLESALE · PRIVATE LABEL INQUIRIES</div>
-    <header>
-        <a href="index.html">
-            <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-%20logo-2.png" alt="Olavi" class="logo">
-        </a>
-        <div class="nav-wrap">
-            <a href="index.html" class="nav-item">Home</a>
-            <div class="dropdown">
-                <a href="#" class="nav-item">Products ▾</a>
-                <div class="dropdown-menu">
-                    <a href="cotton-swabs.html">Wooden Cotton Swabs</a>
-                    <a href="lipstick-lipgloss-list.html">Lipstick & Lip Gloss</a>
-                    <a href="makeup-mirrors-list.html">Makeup Mirrors</a>
-                </div>
-            </div>
-            <a href="about.html" class="nav-item">About Us</a>
-            <div class="dropdown">
-                <a href="#" class="nav-item">Certificates ▾</a>
-                <div class="dropdown-menu">
-                    <a href="#">Cert 1</a>
-                    <a href="#">Cert 2</a>
-                </div>
-            </div>
-            <a href="contact.html" class="nav-item">Contact Us</a>
-        </div>
-        <a href="contact.html" class="contact-btn-header">CONTACT US</a>
-    </header>
+<div class="top">B2B BEAUTY SUPPLY · WHOLESALE · PRIVATE LABEL INQUIRIES</div>
+<header class="nav">
+<a class="logo" href="index.html" aria-label="Olavi Beauty Home">
+  <img
+    src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-%20logo-2.png"
+    alt="Olavi Beauty"
+  >
+</a>
 
-    <main>
-        <div class="breadcrumb">
-            <a href="index.html">Home</a> / <span>Lipstick & Lip Gloss</span>
-        </div>
-        <h1 class="page-title">Lipstick & Lip Gloss</h1>
-        <div class="product-grid">
-            <!-- 第一款唇釉产品，链接指向 lip-gloss.html -->
-            <div class="product-card">
-                <a href="lip-gloss.html">
-                    <div class="card-img-wrap">
-                        <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-Lip%20gloss/Olavi%20Beauty-Lip%20gloss-01.jpg" alt="2-in-1 Lipstick & Lip Gloss">
-                    </div>
-                    <div class="card-text">
-                        <div class="card-name">2-in-1 Lipstick & Lip Gloss</div>
-                        <div class="card-desc">A 2-in-1 lip color product for beauty brands, retailers and distributors. Contact us to discuss wholesale supply, product details and private label opportunities.</div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </main>
+<nav class="links">
+  <a href="index.html">Home</a>
 
-    <footer>
-        <p>© 2026 Olavi Beauty. All rights reserved. B2B Wholesale & Private Label Beauty Supplier</p>
-    </footer>
+  <div class="nav-dropdown">
+    <a href="#products" class="dropdown-toggle">Products</a>
+    <div class="dropdown-menu">
+      <a href="cotton-swabs.html">Wooden Cotton Swabs</a>
+      <a href="lipstick-lipgloss-list.html">Lipstick &amp; Lip Gloss</a>
+      <a href="makeup-mirrors-list.html">Makeup Mirrors</a>
+    </div>
+  </div>
+
+  <a href="about-us.html">About Us</a>
+
+  <div class="nav-dropdown">
+    <a href="#certificate" class="dropdown-toggle">Certificates</a>
+    <div class="dropdown-menu">
+      <a href="#certificate">Our Certificate</a>
+    </div>
+  </div>
+
+  <a href="#contact">Contact Us</a>
+</nav>
+
+<a class="btn" href="#contact">CONTACT US</a>
+</header>
+<main>
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> / <span>Lipstick & Lip Gloss</span>
+  </div>
+  <h1 class="page-title">Lipstick & Lip Gloss</h1>
+  <div class="product-grid">
+    <!-- 第一款唇釉产品 -->
+    <div class="product-card">
+      <a href="lip-gloss.html">
+        <div class="card-img-wrap">
+          <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-Lip%20gloss/Olavi%20Beauty-Lip%20gloss-01.jpg" alt="2-in-1 Lipstick & Lip Gloss">
+        </div>
+      </a>
+      <div class="card-text">
+        <h3 class="card-name">
+          <a href="lip-gloss.html">2-in-1 Lipstick & Lip Gloss</a>
+        </h3>
+        <p class="card-desc">A versatile lip color solution for beauty brands, retailers and distributors. Wholesale and private label inquiries welcome.</p>
+        <a class="learn" href="lip-gloss.html">View Product Details ↗</a>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="footer">
+  <div>OLAVI BEAUTY</div>
+  <div>B2B Beauty Products · Wholesale · OEM / ODM Inquiries</div>
+  <div>© 2026 Olavi Beauty</div>
+</footer>
 </body>
 </html>
