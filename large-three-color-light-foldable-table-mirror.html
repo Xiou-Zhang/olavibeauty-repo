@@ -8,11 +8,10 @@
   <style>
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 body {
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: #352e2a;
   background: #fff;
@@ -25,200 +24,627 @@ a {
 }
 
 header {
-  display:flex;
-  justify-content: space-between;
-  align-items:center;
-  padding:20px 40px;
-  border-bottom:1px solid #eee;
-}
-.logo-img{
-  height:70px;
-}
-.contact-btn{
-  background:#9b654e;
-  color:#fff;
-  padding:10px 22px;
-  border-radius:4px;
-  font-weight:500;
-}
-.contact-btn:hover{
-  opacity:0.9;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee6e1;
 }
 
 .container {
   width: 92%;
-  max-width: 1280px;
+  max-width: 1500px;
   margin: 0 auto;
-  padding:30px 0;
-}
-.breadcrumb{
-  color:#777;
-  font-size:15px;
-  margin-bottom:30px;
-}
-.breadcrumb a{
-  color:#9b654e;
 }
 
-.product-wrap{
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex: 1;
+  min-width: 0;
+}
+
+.logo {
+  display: block;
+  width: 180px;
+  max-width: 48%;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  font-size: 14px;
+  color: #352c29;
+  padding: 6px 0;
+}
+
+.site-nav a:hover {
+  color: #9a6356;
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown > a::after {
+  content: " ▾";
+  font-size: 10px;
+}
+
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background: #fff;
+  border: 1px solid #eee6e1;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
+  z-index: 999;
+}
+
+.nav-dropdown-menu a {
+  display: block;
+  padding: 10px 14px;
+  font-size: 13px;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu {
+  display: block;
+}
+
+.contact-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #9a6356;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink:0;
+}
+
+.contact-link:hover,
+.cta:hover {
+  background: #805044;
+}
+
+.breadcrumb {
+  padding: 24px 0;
+  color: #806e65;
+  font-size: 14px;
+}
+
+.breadcrumb a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: #9a6356;
+}
+
+main {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 4% 55px;
+}
+
+.product-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap:48px;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: 48px;
   align-items: start;
+  min-width: 0;
 }
-@media(max-width:768px){
-  .product-wrap{
-    grid-template-columns: 1fr;
+
+.gallery {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+  width: 100%;
+  min-width: 0;
+}
+
+.thumbnail-gallery {
+  display: grid;
+  grid-template-rows: 24px 352px 24px;
+  gap: 8px;
+  width: 76px;
+  min-width: 0;
+}
+
+.thumbnail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 352px;
+  overflow: hidden;
+}
+
+.thumbnail {
+  display: block;
+  flex: 0 0 76px;
+  width: 76px;
+  height: 76px;
+  padding: 3px;
+  border: 1px solid #e5ddd7;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.thumbnail img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+  border: 2px solid #9a6356;
+  padding: 2px;
+}
+
+.thumb-arrow {
+  width: 76px;
+  height: 24px;
+  border: none;
+  border-radius: 4px;
+  background: #f8f4f0;
+  color: #8f5e51;
+  cursor: pointer;
+}
+
+.thumb-arrow:hover {
+  background: #eee2da;
+}
+
+.main-image-wrap {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  background: #f8f4f0;
+  border-radius: 8px;
+}
+
+.main-image-wrap .product-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #f8f4f0;
+  transition: opacity 0.15s ease;
+}
+
+.product-info {
+  min-width: 0;
+  padding-top: 6px;
+}
+
+.eyebrow {
+  color: #a46555;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 12px 0 18px;
+  font-size: clamp(30px, 3.2vw, 46px);
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.intro {
+  margin: 0 0 34px;
+  color: #70655f;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.specs {
+  width: 100%;
+  margin: 24px 0 30px;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.specs td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #eee6e1;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.specs td:first-child {
+  width: 38%;
+  color: #806e65;
+  font-weight: 400;
+}
+
+.specs td:last-child {
+  color: #352e2a;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 13px 30px;
+  background: #9a6356;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.quote-help {
+  margin: 14px 0 0;
+  color: #806e65;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+footer {
+  padding: 25px 4%;
+  background: #f8f4f0;
+  color: #655e59;
+  font-size: 13px;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  header {
+    padding: 16px 0;
   }
-}
 
-.img-main-box{
-  display:flex;
-  gap:16px;
-}
-.thumb-column{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-  width:72px;
-}
-.thumb-column img{
-  width:100%;
-  height:72px;
-  object-fit:cover;
-  border-radius:4px;
-  cursor:pointer;
-  border:2px solid transparent;
-}
-.thumb-column img.active{
-  border-color:#9b654e;
-}
-.big-img{
-  flex:1;
-}
-.big-img img{
-  width:100%;
-  border-radius:8px;
-  display:block;
-}
+  .container {
+    width: calc(100% - 32px);
+  }
 
-.info-block .tag-top{
-  color:#9b654e;
-  font-size:14px;
-  letter-spacing:1px;
-  margin-bottom:8px;
-}
-.info-block h1{
-  font-size:40px;
-  line-height:1.2;
-  margin-bottom:20px;
-}
-.info-block .desc-text{
-  color:#555;
-  margin-bottom:32px;
-}
+  .header-inner {
+    align-items: flex-start;
+    gap: 12px;
+  }
 
-.spec-table{
-  width:100%;
-  margin-bottom:36px;
-}
-.spec-table tr{
-  border-bottom:1px solid #eee;
-}
-.spec-table td{
-  padding:12px 0;
-}
-.spec-table td:first-child{
-  color:#777;
-  width:180px;
-}
+  .header-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap:10px;
+    flex:1;
+    min-width:0;
+  }
 
-.quote-btn{
-  display:inline-block;
-  background:#9b654e;
-  color:#fff;
-  padding:14px 32px;
-  border-radius:4px;
-  font-weight:bold;
-}
-.quote-btn:hover{
-  opacity:0.9;
-}
-.quote-tip{
-  margin-top:10px;
-  font-size:14px;
-  color:#777;
+  .logo {
+    width: 145px;
+    max-width: 48%;
+  }
+
+  .site-nav {
+    gap:14px;
+    width:100%;
+  }
+  .site-nav a {
+    font-size:12px;
+  }
+
+  .contact-link {
+    padding: 9px 12px;
+    font-size: 11px;
+  }
+
+  .breadcrumb {
+    padding: 18px 0;
+    font-size: 12px;
+  }
+
+  main {
+    padding: 0 16px 40px;
+  }
+
+  .product-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "main"
+      "thumbs";
+    gap: 12px;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .main-image-wrap {
+    grid-area: main;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .thumbnail-gallery {
+    grid-area: thumbs;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .thumbnail-list {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    width: 100%;
+    height: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 6px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .thumbnail {
+    flex: 0 0 62px;
+    width: 62px;
+    height: 62px;
+  }
+
+  .thumb-arrow {
+    display: none;
+  }
+
+  .product-info {
+    padding-top: 0;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .intro {
+    margin-bottom: 24px;
+    font-size: 16px;
+  }
+
+  .specs {
+    margin: 20px 0 26px;
+    font-size: 14px;
+  }
+
+  .specs td {
+    padding: 12px 8px;
+  }
+
+  .specs td:first-child {
+    width: 40%;
+  }
+
+  .cta {
+    padding: 12px 22px;
+  }
 }
   </style>
 </head>
 <body>
+  
 <header>
-  <a href="index.html">
-    <img class="logo-img" src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-%20logo-2.png" alt="Olavi Beauty Logo">
-  </a>
-  <a class="contact-btn" href="contact.html">CONTACT US</a>
+  <div class="container header-inner">
+    <div class="header-left">
+      <a href="index.html" aria-label="Olavi Beauty home">
+        <img
+          class="logo"
+          src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-%20logo-2.png"
+          alt="Olavi Beauty">
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <div class="nav-dropdown">
+          <a href="#products">Products</a>
+          <div class="nav-dropdown-menu">
+            <a href="cotton-swabs.html">Cotton Swabs & Cotton Pads</a>
+            <a href="lipstick-lipgloss-list.html">Lipstick &amp; Lip Gloss</a>
+            <a href="makeup-mirrors-list.html">Makeup Mirrors</a>
+          </div>
+        </div>
+        <a href="about-us.html">About Us</a>
+        <div class="nav-dropdown">
+          <a href="#certificate">Certificates</a>
+          <div class="nav-dropdown-menu">
+            <a href="#certificate">Our Certificate</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <a class="contact-link" href="#inquiry">CONTACT US</a>
+  </div>
 </header>
+
 <div class="container">
   <div class="breadcrumb">
-    <a href="index.html">Home</a> / <a href="makeup-mirrors-list.html">Products</a> / Large Three Color Light Desktop Foldable Mirror
-  </div>
-
-  <div class="product-wrap">
-    <div class="img-main-box">
-      <div class="thumb-column">
-        <img onclick="changeImg(this)" class="active" src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type09/Olavi%20Beauty-Makeup%20mirror-type9-03.jpeg">
-        <img onclick="changeImg(this)" src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type09/Olavi%20Beauty-Makeup%20mirror-type9-02.jpeg">
-        <img onclick="changeImg(this)" src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type09/Olavi%20Beauty-Makeup%20mirror-type9-01.jpeg">
-        <img onclick="changeImg(this)" src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type09/Olavi%20Beauty-Makeup%20mirror-type9-06.jpeg">
-        <img onclick="changeImg(this)" src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type09/Olavi%20Beauty-Makeup%20mirror-type9-07.jpeg">
-        <img onclick="changeImg(this)" src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type09/Olavi%20Beauty-Makeup%20mirror-type9-08.jpeg">
-        <img onclick="changeImg(this)" src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type09/Olavi%20Beauty-Makeup%20mirror-type9-09.jpeg">
-      </div>
-      <div class="big-img">
-        <img id="mainImg" src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type09/Olavi%20Beauty-Makeup%20mirror-type9-03.jpeg" alt="Large Three Color Light Desktop Foldable Mirror">
-      </div>
-    </div>
-
-    <div class="info-block">
-      <div class="tag-top">OLAVI BEAUTY · B2B BEAUTY SUPPLY</div>
-      <h1>Large Three Color Light Desktop Foldable Mirror</h1>
-      <p class="desc-text">Portable large LED makeup mirror with 3 color lighting modes, desktop foldable flip vanity mirror with fill light, ideal for dorm and travel.</p>
-
-      <table class="spec-table">
-        <tr>
-          <td>Product Name</td>
-          <td>Large Three Color Light Desktop Foldable Mirror</td>
-        </tr>
-        <tr>
-          <td>Feature</td>
-          <td>3 lighting colors, foldable flip cover design, portable, desktop placement, built-in LED fill light</td>
-        </tr>
-        <tr>
-          <td>Business Service</td>
-          <td>Bulk wholesale, private label / OEM service</td>
-        </tr>
-        <tr>
-          <td>Target Customer</td>
-          <td>Beauty brands, salons, retailers, distributors</td>
-        </tr>
-        <tr>
-          <td>MOQ</td>
-          <td>Negotiable</td>
-        </tr>
-      </table>
-
-      <a class="quote-btn" href="contact.html">REQUEST A QUOTE</a>
-      <p class="quote-tip">Tell us your target quantity and requirements. Our team will follow up with you.</p>
-    </div>
+    <a href="index.html">Home</a> /
+    <a href="makeup-mirrors-list.html">Makeup Mirrors</a> /
+    <span>Large Three Color Light Desktop Foldable Mirror</span>
   </div>
 </div>
 
+  <main>
+    <div class="product-layout">
+      
+<div class="gallery">
+  
+<div class="thumbnail-gallery">
+  <button class="thumb-arrow thumb-up" type="button" aria-label="Previous thumbnails">
+    &#9650;
+  </button>
+
+  <div class="thumbnail-list" aria-label="Product image thumbnails">
+    <button class="thumbnail active" type="button" data-image="0" aria-label="View product image 1">
+      <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type09/Olavi%20Beauty-Makeup%20mirror-type9-03.jpeg" alt="">
+    </button>
+    <button class="thumbnail" type="button" data-image="1" aria-label="View product image 2">
+      <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type09/Olavi%20Beauty-Makeup%20mirror-type9-02.jpeg" alt="">
+    </button>
+    <button class="thumbnail" type="button" data-image="2" aria-label="View product image 3">
+      <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type09/Olavi%20Beauty-Makeup%20mirror-type9-01.jpeg" alt="">
+    </button>
+    <button class="thumbnail" type="button" data-image="3" aria-label="View product image 4">
+      <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type09/Olavi%20Beauty-Makeup%20mirror-type9-06.jpeg" alt="">
+    </button>
+    <button class="thumbnail" type="button" data-image="4" aria-label="View product image 5">
+      <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type09/Olavi%20Beauty-Makeup%20mirror-type9-07.jpeg" alt="">
+    </button>
+    <button class="thumbnail" type="button" data-image="5" aria-label="View product image 6">
+      <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type09/Olavi%20Beauty-Makeup%20mirror-type9-08.jpeg" alt="">
+    </button>
+    <button class="thumbnail" type="button" data-image="6" aria-label="View product image 7">
+      <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type09/Olavi%20Beauty-Makeup%20mirror-type9-09.jpeg" alt="">
+    </button>
+  </div>
+
+  <button class="thumb-arrow thumb-down" type="button" aria-label="Next thumbnails">
+    &#9660;
+  </button>
+</div>
+
+
+  <div class="main-image-wrap">
+    <img
+      id="mainProductImage"
+      class="product-image"
+      src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-LED%20Makeup%20mirror/Makeup%20mirror-type09/Olavi%20Beauty-Makeup%20mirror-type9-03.jpeg"
+      alt="Large Three Color Light Desktop Foldable Mirror">
+  </div>
+</div>
+
+
+      
+<section class="product-info">
+  <div class="eyebrow">OLAVI BEAUTY · B2B BEAUTY SUPPLY</div>
+
+  <h1>Large Three Color Light Desktop Foldable Mirror</h1>
+
+  <p class="intro">
+    Portable large LED makeup mirror with 3 lighting modes, desktop foldable flip vanity mirror with fill light, ideal for dorm and travel.
+  </p>
+
+  <table class="specs">
+    <tr>
+      <td>Product Name</td>
+      <td>Large Three Color Light Desktop Foldable Mirror</td>
+    </tr>
+    <tr>
+      <td>Feature</td>
+      <td>3 lighting colors, foldable flip cover design, portable, desktop placement, built-in LED fill light</td>
+    </tr>
+    <tr>
+      <td>Business Service</td>
+      <td>Bulk wholesale, private label / OEM service</td>
+    </tr>
+    <tr>
+      <td>Target Customer</td>
+      <td>Beauty brands, salons, retailers, distributors</td>
+    </tr>
+    <tr>
+      <td>MOQ</td>
+      <td>Negotiable</td>
+    </tr>
+  </table>
+
+  <a class="cta" id="inquiry" href="mailto:tina@olavibeauty.com?subject=Olavi%20Beauty%20Large%20Three%20Color%20Light%20Desktop%20Foldable%20Mirror%20Inquiry">
+    REQUEST A QUOTE
+  </a>
+
+  <p class="quote-help">
+    Tell us your target quantity and requirements. Our team will follow up with you.
+  </p>
+</section>
+    </div>
+  </main>
+
+  <footer>
+    © Olavi Beauty · Wholesale Beauty Supply · OEM / ODM Inquiries
+  </footer>
+
 <script>
-function changeImg(el){
-  document.getElementById('mainImg').src = el.src;
-  document.querySelectorAll('.thumb-column img').forEach(i=>i.classList.remove('active'));
-  el.classList.add('active');
-}
+  const mainImage = document.getElementById('mainProductImage');
+  const thumbnails = Array.from(document.querySelectorAll('.thumbnail'));
+  const thumbnailList = document.querySelector('.thumbnail-list');
+  const upButton = document.querySelector('.thumb-up');
+  const downButton = document.querySelector('.thumb-down');
+
+  let currentIndex = 0;
+
+  function changeImage(index) {
+    const thumbnail = thumbnails[index];
+    if (!thumbnail) return;
+
+    const thumbnailImage = thumbnail.querySelector('img');
+
+    mainImage.src = thumbnailImage.src;
+    mainImage.alt = 'Large Three Color Light Desktop Foldable Mirror - product image ' + (index + 1);
+
+    thumbnails.forEach(function (item) {
+      item.classList.remove('active');
+    });
+
+    thumbnail.classList.add('active');
+    currentIndex = index;
+  }
+
+  thumbnails.forEach(function (thumbnail, index) {
+    thumbnail.addEventListener('mouseenter', function () {
+      changeImage(index);
+    });
+
+    thumbnail.addEventListener('click', function () {
+      changeImage(index);
+    });
+
+    thumbnail.addEventListener('focus', function () {
+      changeImage(index);
+    });
+  });
+
+  downButton.addEventListener('click', function () {
+    const nextIndex = Math.min(currentIndex + 1, thumbnails.length - 1);
+    changeImage(nextIndex);
+
+    if (nextIndex >= 3) {
+      thumbnailList.scrollTop = thumbnailList.scrollHeight;
+    }
+  });
+
+  upButton.addEventListener('click', function () {
+    const previousIndex = Math.max(currentIndex - 1, 0);
+    changeImage(previousIndex);
+
+    if (previousIndex <= 2) {
+      thumbnailList.scrollTop = 0;
+    }
+  });
 </script>
+
 </body>
 </html>
