@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Baby paper stick double head cotton swabs, 100 pcs per barrel, medical grade degreased cotton swabs for cleaning and disinfection.">
-  <title>Baby Paper Stick Double Head Cotton Swabs | Olavi Beauty</title>
+  <meta name="description" content="Wet Compress & Makeup Remover Pads, disposable non-woven flat sandwich pads, skin-friendly and lint-free, specially designed for facial wet compress.">
+  <title>Wet Compress & Makeup Remover Pads | Olavi Beauty</title>
   <style>
 * {
   box-sizing: border-box;
@@ -41,11 +41,69 @@ header {
   gap: 20px;
 }
 
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex: 1;
+  min-width: 0;
+}
+
 .logo {
   display: block;
   width: 180px;
   max-width: 48%;
   height: auto;
+  flex-shrink: 0;
+}
+
+/* 统一导航样式 */
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  font-size: 14px;
+  color: #352c29;
+  padding: 6px 0;
+}
+
+.site-nav a:hover {
+  color: #9a6356;
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown > a::after {
+  content: " ▾";
+  font-size: 10px;
+}
+
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background: #fff;
+  border: 1px solid #eee6e1;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
+  z-index: 999;
+}
+
+.nav-dropdown-menu a {
+  display: block;
+  padding: 10px 14px;
+  font-size: 13px;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu {
+  display: block;
 }
 
 .contact-link {
@@ -58,9 +116,11 @@ header {
   letter-spacing: 1px;
   text-decoration: none;
   white-space: nowrap;
+  flex-shrink:0;
 }
 
-.contact-link:hover, .cta:hover {
+.contact-link:hover,
+.cta:hover {
   background: #805044;
 }
 
@@ -141,7 +201,8 @@ main {
   object-fit: contain;
 }
 
-.thumbnail:hover, .thumbnail.active {
+.thumbnail:hover,
+.thumbnail.active {
   border: 2px solid #9a6356;
   padding: 2px;
 }
@@ -271,12 +332,29 @@ footer {
   }
 
   .header-inner {
+    align-items: flex-start;
     gap: 12px;
+  }
+
+  .header-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap:10px;
+    flex:1;
+    min-width:0;
   }
 
   .logo {
     width: 145px;
     max-width: 48%;
+  }
+
+  .site-nav {
+    gap:14px;
+    width:100%;
+  }
+  .site-nav a {
+    font-size:12px;
   }
 
   .contact-link {
@@ -376,119 +454,138 @@ footer {
 }
   </style>
 </head>
-
 <body>
-  <header>
-    <div class="container header-inner">
+  
+<header>
+  <div class="container header-inner">
+    <div class="header-left">
       <a href="index.html" aria-label="Olavi Beauty home">
         <img
           class="logo"
           src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-%20logo-2.png"
           alt="Olavi Beauty">
       </a>
-      <a class="contact-link" href="#inquiry">CONTACT US</a>
+      <!-- 统一导航下拉菜单 -->
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <div class="nav-dropdown">
+          <a href="#products">Products</a>
+          <div class="nav-dropdown-menu">
+            <a href="cotton-swabs.html">Cotton Swabs & Cotton Pads</a>
+            <a href="lipstick-lipgloss-list.html">Lipstick &amp; Lip Gloss</a>
+            <a href="makeup-mirrors-list.html">Makeup Mirrors</a>
+          </div>
+        </div>
+        <a href="about-us.html">About Us</a>
+        <div class="nav-dropdown">
+          <a href="#certificate">Certificates</a>
+          <div class="nav-dropdown-menu">
+            <a href="#certificate">Our Certificate</a>
+          </div>
+        </div>
+      </nav>
     </div>
-  </header>
-
-  <div class="container">
-    <div class="breadcrumb">
-      <a href="index.html">Home</a> /
-      <a href="cotton-swabs.html">Wooden Cotton Swabs</a> /
-      <span>Baby Paper Stick Double Head Cotton Swabs</span>
-    </div>
+    <a class="contact-link" href="#inquiry">CONTACT US</a>
   </div>
+</header>
+
+<div class="container">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> /
+    <a href="index.html#products">Products</a> /
+    <span>Wet Compress & Makeup Remover Pads</span>
+  </div>
+</div>
 
   <main>
     <div class="product-layout">
-      <div class="gallery">
-        <div class="thumbnail-gallery">
-          <button class="thumb-arrow thumb-up" type="button" aria-label="Previous thumbnails">
-            &#9650;
-          </button>
+      
+<div class="gallery">
+  
+<div class="thumbnail-gallery">
+  <button class="thumb-arrow thumb-up" type="button" aria-label="Previous thumbnails">
+    &#9650;
+  </button>
 
-          <div class="thumbnail-list" aria-label="Product image thumbnails">
-            <button class="thumbnail active" type="button" data-image="0" aria-label="View product image 1">
-              <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-Cotton%20swab/type-09/Olavi%20Beauty-Cotton%20swab-type9-01.jpeg" alt="">
-            </button>
-            <button class="thumbnail" type="button" data-image="1" aria-label="View product image 2">
-              <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-Cotton%20swab/type-09/Olavi%20Beauty-Cotton%20swab-type9-02.jpeg" alt="">
-            </button>
-            <button class="thumbnail" type="button" data-image="2" aria-label="View product image 3">
-              <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-Cotton%20swab/type-09/Olavi%20Beauty-Cotton%20swab-type9-03.jpeg" alt="">
-            </button>
-            <button class="thumbnail" type="button" data-image="3" aria-label="View product image 4">
-              <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-Cotton%20swab/type-09/Olavi%20Beauty-Cotton%20swab-type9-04.jpeg" alt="">
-            </button>
-            <button class="thumbnail" type="button" data-image="4" aria-label="View product image 5">
-              <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-Cotton%20swab/type-09/Olavi%20Beauty-Cotton%20swab-type9-05.jpg" alt="">
-            </button>
-            <button class="thumbnail" type="button" data-image="5" aria-label="View product image 6">
-              <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-Cotton%20swab/type-09/Olavi%20Beauty-Cotton%20swab-type9-06.jpg" alt="">
-            </button>
-          </div>
+  <div class="thumbnail-list" aria-label="Product image thumbnails">
+    <button class="thumbnail active" type="button" data-image="0" aria-label="View product image 1">
+      <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-Cotton%20swab/type-06/Olavi%20Beauty-Cotton%20swab-type6-01.jpg" alt="">
+    </button>
+    <button class="thumbnail" type="button" data-image="1" aria-label="View product image 2">
+      <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-Cotton%20swab/type-06/Olavi%20Beauty-Cotton%20swab-type6-02.jpg" alt="">
+    </button>
+    <button class="thumbnail" type="button" data-image="2" aria-label="View product image 3">
+      <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-Cotton%20swab/type-06/Olavi%20Beauty-Cotton%20swab-type6-03.jpg" alt="">
+    </button>
+    <button class="thumbnail" type="button" data-image="3" aria-label="View product image 4">
+      <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-Cotton%20swab/type-06/Olavi%20Beauty-Cotton%20swab-type6-04.jpg" alt="">
+    </button>
+    <button class="thumbnail" type="button" data-image="4" aria-label="View product image 5">
+      <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-Cotton%20swab/type-06/Olavi%20Beauty-Cotton%20swab-type6-05.jpg" alt="">
+    </button>
+  </div>
 
-          <button class="thumb-arrow thumb-down" type="button" aria-label="Next thumbnails">
-            &#9660;
-          </button>
-        </div>
+  <button class="thumb-arrow thumb-down" type="button" aria-label="Next thumbnails">
+    &#9660;
+  </button>
+</div>
 
-        <div class="main-image-wrap">
-          <img
-            id="mainProductImage"
-            class="product-image"
-            src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-Cotton%20swab/type-09/Olavi%20Beauty-Cotton%20swab-type9-01.jpeg"
-            alt="Baby Paper Stick Double Head Cotton Swabs">
-        </div>
-      </div>
 
-      <section class="product-info">
-        <div class="eyebrow">OLAVI BEAUTY · B2B BEAUTY SUPPLY</div>
+  <div class="main-image-wrap">
+    <img
+      id="mainProductImage"
+      class="product-image"
+      src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-Cotton%20swab/type-06/Olavi%20Beauty-Cotton%20swab-type6-01.jpg"
+      alt="Wet Compress & Makeup Remover Pads">
+  </div>
+</div>
 
-        <h1>Baby Paper Stick Double Head Cotton Swabs</h1>
 
-        <p class="intro">
-          Disposable paper stick double head cotton swabs, 100 pcs per barrel, medical grade degreased cotton swabs for cleaning and disinfection.
-        </p>
+      
+<section class="product-info">
+  <div class="eyebrow">OLAVI BEAUTY · B2B BEAUTY SUPPLY</div>
 
-        <table class="specs">
-          <tr>
-            <td>Product Type</td>
-            <td>Baby Paper Stick Double Head Cotton Swabs</td>
-          </tr>
-          <tr>
-            <td>Material</td>
-            <td>Paper stick + medical degreased cotton</td>
-          </tr>
-          <tr>
-            <td>Specification</td>
-            <td>100 pcs / barrel</td>
-          </tr>
-          <tr>
-            <td>Function</td>
-            <td>Baby ear cleaning, skin care, disinfection cleaning</td>
-          </tr>
-          <tr>
-            <td>Feature</td>
-            <td>Medical grade, soft cotton tip, safe for baby</td>
-          </tr>
-          <tr>
-            <td>Minimum Order</td>
-            <td>Negotiable</td>
-          </tr>
-          <tr>
-            <td>Customization</td>
-            <td>OEM & Private Label available</td>
-          </tr>
-        </table>
+  <h1>Wet Compress & Makeup Remover Pads</h1>
 
-        <a class="cta" id="inquiry" href="index.html#contact">
-          REQUEST A QUOTE
-        </a>
+  <p class="intro">
+    Disposable non-woven flat sandwich wet compress pads, skin-friendly, lint-free, specially designed for facial wet compress.
+  </p>
 
-        <p class="quote-help">
-          Tell us your target quantity and requirements. Our team will follow up with you.
-        </p>
-      </section>
+  <table class="specs">
+    <tr>
+      <td>Product Type</td>
+      <td>Wet Compress & Makeup Remover Pads</td>
+    </tr>
+    <tr>
+      <td>Material</td>
+      <td>Flat sandwich non-woven fabric</td>
+    </tr>
+    <tr>
+      <td>Function</td>
+      <td>Facial wet compress, makeup removing, skin care</td>
+    </tr>
+    <tr>
+      <td>Feature</td>
+      <td>Skin-friendly, lint-free, good water retention</td>
+    </tr>
+    <tr>
+      <td>Minimum Order</td>
+      <td>Negotiable</td>
+    </tr>
+    <tr>
+      <td>Customization</td>
+      <td>OEM & Private Label available</td>
+    </tr>
+  </table>
+
+  <a class="cta" id="inquiry" href="mailto:tina@olavibeauty.com?subject=Olavi%20Beauty%20Wet%20Compress%20%26%20Makeup%20Remover%20Pads%20Inquiry">
+    REQUEST A QUOTE
+  </a>
+
+  <p class="quote-help">
+    Tell us your target quantity and requirements. Our team will follow up with you.
+  </p>
+</section>
     </div>
   </main>
 
@@ -496,64 +593,64 @@ footer {
     © Olavi Beauty · Wholesale Beauty Supply · OEM / ODM Inquiries
   </footer>
 
-  <script>
-    const mainImage = document.getElementById('mainProductImage');
-    const thumbnails = Array.from(document.querySelectorAll('.thumbnail'));
-    const thumbnailList = document.querySelector('.thumbnail-list');
-    const upButton = document.querySelector('.thumb-up');
-    const downButton = document.querySelector('.thumb-down');
+<script>
+  const mainImage = document.getElementById('mainProductImage');
+  const thumbnails = Array.from(document.querySelectorAll('.thumbnail'));
+  const thumbnailList = document.querySelector('.thumbnail-list');
+  const upButton = document.querySelector('.thumb-up');
+  const downButton = document.querySelector('.thumb-down');
 
-    let currentIndex = 0;
+  let currentIndex = 0;
 
-    function changeImage(index) {
-      const thumbnail = thumbnails[index];
-      if (!thumbnail) return;
+  function changeImage(index) {
+    const thumbnail = thumbnails[index];
+    if (!thumbnail) return;
 
-      const thumbnailImage = thumbnail.querySelector('img');
+    const thumbnailImage = thumbnail.querySelector('img');
 
-      mainImage.src = thumbnailImage.src;
-      mainImage.alt = 'Baby Paper Stick Double Head Cotton Swabs - product image ' + (index + 1);
+    mainImage.src = thumbnailImage.src;
+    mainImage.alt = 'Wet Compress & Makeup Remover Pads - product image ' + (index + 1);
 
-      thumbnails.forEach(function (item) {
-        item.classList.remove('active');
-      });
+    thumbnails.forEach(function (item) {
+      item.classList.remove('active');
+    });
 
-      thumbnail.classList.add('active');
-      currentIndex = index;
+    thumbnail.classList.add('active');
+    currentIndex = index;
+  }
+
+  thumbnails.forEach(function (thumbnail, index) {
+    thumbnail.addEventListener('mouseenter', function () {
+      changeImage(index);
+    });
+
+    thumbnail.addEventListener('click', function () {
+      changeImage(index);
+    });
+
+    thumbnail.addEventListener('focus', function () {
+      changeImage(index);
+    });
+  });
+
+  downButton.addEventListener('click', function () {
+    const nextIndex = Math.min(currentIndex + 1, thumbnails.length - 1);
+    changeImage(nextIndex);
+
+    if (nextIndex >= 3) {
+      thumbnailList.scrollTop = thumbnailList.scrollHeight;
     }
+  });
 
-    thumbnails.forEach(function (thumbnail, index) {
-      thumbnail.addEventListener('mouseenter', function () {
-        changeImage(index);
-      });
+  upButton.addEventListener('click', function () {
+    const previousIndex = Math.max(currentIndex - 1, 0);
+    changeImage(previousIndex);
 
-      thumbnail.addEventListener('click', function () {
-        changeImage(index);
-      });
+    if (previousIndex <= 2) {
+      thumbnailList.scrollTop = 0;
+    }
+  });
+</script>
 
-      thumbnail.addEventListener('focus', function () {
-        changeImage(index);
-      });
-    });
-
-    downButton.addEventListener('click', function () {
-      const nextIndex = Math.min(currentIndex + 1, thumbnails.length - 1);
-      changeImage(nextIndex);
-
-      if (nextIndex >= 3) {
-        thumbnailList.scrollTop = thumbnailList.scrollHeight;
-      }
-    });
-
-    upButton.addEventListener('click', function () {
-      const previousIndex = Math.max(currentIndex - 1, 0);
-      changeImage(previousIndex);
-
-      if (previousIndex <= 2) {
-        thumbnailList.scrollTop = 0;
-      }
-    });
-  </script>
 </body>
 </html>
-
