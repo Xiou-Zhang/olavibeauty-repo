@@ -57,7 +57,7 @@ header {
   flex-shrink: 0;
 }
 
-/* 导航菜单样式 和口红页统一 */
+/* 导航样式 和lip gloss页面统一 */
 .site-nav {
   display: flex;
   align-items: center;
@@ -67,7 +67,7 @@ header {
 
 .site-nav a {
   font-size: 14px;
-  color: #352e2a;
+  color: #352c29;
   padding: 6px 0;
 }
 
@@ -116,6 +116,7 @@ header {
   letter-spacing: 1px;
   text-decoration: none;
   white-space: nowrap;
+  flex-shrink:0;
 }
 
 .contact-link:hover,
@@ -339,7 +340,8 @@ footer {
     flex-direction: column;
     align-items: flex-start;
     gap:10px;
-    width:100%;
+    flex:1;
+    min-width:0;
   }
 
   .logo {
@@ -463,7 +465,7 @@ footer {
           src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-%20logo-2.png"
           alt="Olavi Beauty">
       </a>
-      <!-- 导航菜单，和口红页面保持一致 -->
+      <!-- 导航栏，和lip gloss页面完全一致 -->
       <nav class="site-nav">
         <a href="index.html">Home</a>
         <div class="nav-dropdown">
@@ -483,7 +485,7 @@ footer {
         </div>
       </nav>
     </div>
-    <!-- contact-link 地址保持原样 #inquiry，没有改动 -->
+    <!-- CONTACT US 保持原来 href="#inquiry" 不改动 -->
     <a class="contact-link" href="#inquiry">CONTACT US</a>
   </div>
 </header>
@@ -582,7 +584,7 @@ footer {
     </tr>
   </table>
 
-  <a class="cta" id="inquiry" href="index.html#contact">
+  <a class="cta" id="inquiry" href="mailto:tina@olavibeauty.com?subject=Olavi%20Beauty%20Cotton%20Swabs%20Inquiry">
     REQUEST A QUOTE
   </a>
 
