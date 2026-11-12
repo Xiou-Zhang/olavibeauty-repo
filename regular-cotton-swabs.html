@@ -41,11 +41,69 @@ header {
   gap: 20px;
 }
 
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex: 1;
+  min-width: 0;
+}
+
 .logo {
   display: block;
   width: 180px;
   max-width: 48%;
   height: auto;
+  flex-shrink: 0;
+}
+
+/* 导航菜单样式 和口红页统一 */
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  font-size: 14px;
+  color: #352e2a;
+  padding: 6px 0;
+}
+
+.site-nav a:hover {
+  color: #9a6356;
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown > a::after {
+  content: " ▾";
+  font-size: 10px;
+}
+
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background: #fff;
+  border: 1px solid #eee6e1;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
+  z-index: 999;
+}
+
+.nav-dropdown-menu a {
+  display: block;
+  padding: 10px 14px;
+  font-size: 13px;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu {
+  display: block;
 }
 
 .contact-link {
@@ -273,12 +331,28 @@ footer {
   }
 
   .header-inner {
+    align-items: flex-start;
     gap: 12px;
+  }
+
+  .header-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap:10px;
+    width:100%;
   }
 
   .logo {
     width: 145px;
     max-width: 48%;
+  }
+
+  .site-nav {
+    gap:14px;
+    width:100%;
+  }
+  .site-nav a {
+    font-size:12px;
   }
 
   .contact-link {
@@ -382,12 +456,34 @@ footer {
   
 <header>
   <div class="container header-inner">
-    <a href="index.html" aria-label="Olavi Beauty home">
-      <img
-        class="logo"
-        src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-%20logo-2.png"
-        alt="Olavi Beauty">
-    </a>
+    <div class="header-left">
+      <a href="index.html" aria-label="Olavi Beauty home">
+        <img
+          class="logo"
+          src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-%20logo-2.png"
+          alt="Olavi Beauty">
+      </a>
+      <!-- 导航菜单，和口红页面保持一致 -->
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <div class="nav-dropdown">
+          <a href="#products">Products</a>
+          <div class="nav-dropdown-menu">
+            <a href="cotton-swabs.html">Cotton Swabs & Cotton Pads</a>
+            <a href="lipstick-lipgloss-list.html">Lipstick &amp; Lip Gloss</a>
+            <a href="makeup-mirrors-list.html">Makeup Mirrors</a>
+          </div>
+        </div>
+        <a href="about-us.html">About Us</a>
+        <div class="nav-dropdown">
+          <a href="#certificate">Certificates</a>
+          <div class="nav-dropdown-menu">
+            <a href="#certificate">Our Certificate</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- contact-link 地址保持原样 #inquiry，没有改动 -->
     <a class="contact-link" href="#inquiry">CONTACT US</a>
   </div>
 </header>
