@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Olavi Beauty — Professional B2B beauty essentials supplier. We provide cotton swabs, lip gloss, lipstick, LED makeup mirrors with OEM, ODM and private label service.">
+  <title>About Us | Olavi Beauty</title>
+  <style>
+:root{--ink:#252321;--muted:#716b65;--cream:#faf7f2;--pink:#ead7d0;--accent:#9a6356;--line:#e8e0d9}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--ink);
+  background:#fff;
+  line-height:1.6
+}
+a{color:inherit;text-decoration:none}
+.top{
+  background:#292522;
+  color:#fff;
+  text-align:center;
+  padding:9px;
+  font-size:12px;
+  letter-spacing:1px;
+}
+.nav{
+  height:76px;
+  padding:0 7%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  border-bottom:1px solid var(--line);
+}
+.logo{
+  display:flex;
+  align-items:center;
+  flex-shrink:0;
+}
+.logo img{
+  display:block;
+  height:52px;
+  width:auto;
+  max-width:180px;
+  object-fit:contain;
+}
+.links{
+  display:flex;
+  gap:25px;
+  font-size:13px;
+  align-items:center;
+}
+.links > a,
+.dropdown-toggle {
+  display: inline-block;
+  padding: 12px 0;
+  white-space: nowrap;
+}
+.nav-dropdown {
+  position: relative;
+}
+.dropdown-toggle::after {
+  content: " ▾";
+  font-size: 10px;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -12px;
+  min-width: 210px;
+  padding: 8px 0;
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+}
+.dropdown-menu a {
+  display: block;
+  padding: 10px 14px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+.dropdown-menu a:hover {
+  background: var(--cream);
+  color: var(--accent);
+}
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+.btn{
+  display:inline-block;
+  background:var(--ink);
+  color:white;
+  padding:13px 21px;
+  font-size:12px;
+  letter-spacing:1px;
+  border:1px solid var(--ink)
+}
+
+.breadcrumb{
+  padding:26px 7% 12px;
+  font-size:13px;
+  color:var(--muted);
+}
+.breadcrumb a:hover{
+  color:var(--accent);
+}
+
+main{
+  padding:0 7% 76px;
+  max-width:1400px;
+  margin:0 auto;
+}
+h1{
+  font-family: Georgia, serif;
+  font-size: clamp(32px, 3.5vw, 44px);
+  line-height: 1.18;
+  font-weight: normal;
+  margin: 0 0 24px;
+}
+
+.image-row{
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap:18px;
+  margin:32px 0;
+}
+.image-row img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+.content-text{
+  background:var(--cream);
+  padding:32px;
+  border-radius:10px;
+  font-size:16px;
+}
+.content-text p{
+  margin-bottom:18px;
+}
+
+.footer{
+  background:#292522;
+  color:white;
+  padding:35px 8%;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  font-size:12px
+}
+
+@media(max-width:700px){
+  .nav{
+    padding:12px 5%;
+    height:auto;
+    min-height:70px;
+    flex-wrap:wrap;
+  }
+  .links {
+    width: 100%;
+    gap: 15px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    align-items: center;
+  }
+  .dropdown-menu {
+    left: 0;
+    min-width: 190px;
+  }
+  .dropdown-menu a {
+    padding: 12px 14px;
+  }
+  .nav .btn{
+    padding:9px 12px;
+  }
+  .breadcrumb{
+    padding:18px 5% 8px;
+    font-size:12px;
+  }
+  main{
+    padding:0 5% 52px;
+  }
+  .image-row{
+    grid-template-columns:1fr;
+  }
+  .image-row img{
+    height:auto;
+  }
+  .content-text{
+    padding:20px;
+  }
+  .footer{
+    flex-direction:column;
+  }
+}
+</style>
+</head>
+<body>
+<div class="top">B2B BEAUTY SUPPLY · WHOLESALE · PRIVATE LABEL INQUIRIES</div>
+<header class="nav">
+<a class="logo" href="index.html" aria-label="Olavi Beauty Home">
+  <img
+    src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/Olavi%20Beauty-%20logo-2.png"
+    alt="Olavi Beauty"
+  >
+</a>
+
+<nav class="links">
+  <a href="index.html">Home</a>
+
+  <div class="nav-dropdown">
+    <a href="#products" class="dropdown-toggle">Products</a>
+    <div class="dropdown-menu">
+      <a href="cotton-swabs.html">Cotton Swabs & Cotton Pads</a>
+      <a href="lipstick-lipgloss-list.html">Lipstick &amp; Lip Gloss</a>
+      <a href="makeup-mirrors-list.html">Makeup Mirrors</a>
+    </div>
+  </div>
+
+  <a href="about.html">About Us</a>
+
+  <div class="nav-dropdown">
+    <a href="#certificate" class="dropdown-toggle">Certificates</a>
+    <div class="dropdown-menu">
+      <a href="#certificate">Our Certificate</a>
+    </div>
+  </div>
+
+  <a href="index.html#contact">Contact Us</a>
+</nav>
+
+<a class="btn" href="index.html#contact">CONTACT US</a>
+</header>
+
+<div class="breadcrumb">
+  <a href="index.html">Home</a> /
+  <span>About Us</span>
+</div>
+
+<main>
+  <h1>About Olavi Beauty</h1>
+
+  <!-- 三张公司&办公图片 -->
+  <div class="image-row">
+    <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/About%20us/%E6%AC%A7%E8%8E%B1%E8%96%87%20-%20about%20us1.jpeg" alt="Olavi Beauty company reception">
+    <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/About%20us/%E6%AC%A7%E8%8E%B1%E8%96%87%20-%20about%20us2.jpeg" alt="Olavi Beauty office team">
+    <img src="https://pub-bb40534b2b0442d2bb08d6c8a301260a.r2.dev/About%20us/%E6%AC%A7%E8%8E%B1%E8%96%87%20-%20about%20us3.jpeg" alt="Olavi Beauty working office">
+  </div>
+
+  <div class="content-text">
+    <p>Olavi Beauty supplies beauty essentials to the businesses that sell them. Our range covers cotton swabs, cotton pads and pure cotton balls, lip gloss and lipstick, and LED makeup mirrors — the fast‑moving items beauty brands, retailers, distributors and online sellers reorder most.</p>
+
+    <p>We keep the catalogue focused rather than broad. Each line is chosen for two things: consistent quality at a wholesale price that leaves room for resale, and enough flexibility to carry your brand. Most items ship in bulk, and many are available for OEM, ODM and private label projects — from logo and color to retail packaging.</p>
+
+    <p>Our role is straightforward. You tell us your market, target price point and packaging requirements; we come back with specifications, samples and a quotation you can work from.</p>
+
+    <p>If you are building or expanding a beauty range, we would be glad to quote it.</p>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div>OLAVI BEAUTY</div>
+  <div>B2B Beauty Products · Wholesale · OEM / ODM Inquiries</div>
+  <div>© 2026 Olavi Beauty</div>
+</footer>
+</body>
+</html>
